@@ -1,0 +1,37 @@
+
+.title {
+    font-size: 10vh;
+}
+
+.login-screen {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: blanchedalmond;
+    height: 100vh;
+}
+
+.login-button {
+    height: 10vh;
+    min-height: 60px;
+    width: 30vw;
+    min-width: 300px;
+    background-color: #1db954;
+    border-radius: 40px;
+    transition-duration: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 13vw;
+    font-size: 1rem;
+}
+
+.login-button:hover {
+    scale: 1.05;
+}
+
+i {
+    margin-left: 1vw;
+}
+
