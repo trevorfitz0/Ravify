@@ -29,14 +29,17 @@ function Result({ background, artistList }) {
                 <img className='final-poster' alt='final poster' src={ backgroundImage }></img>
                 <div className='artists'>
                     <h1 className='headliner'>{artistList[0].name}</h1>
+                    <br/>
+                    <div className='direct-support'>
+                        <h2 className={`direct-1`}>{artistList[1].name}</h2>
+                        <h2 className={`direct-2`}>{artistList[2].name}</h2>
+                    </div>
+                </div>
+                <div className='all-artists'>
                 {
                     artistList.map(item => {
                         acc++
-                        if (acc === 1) {
-                            return
-                        } else if (acc <= 3) {
-                            return <h2 className={`direct-${acc}`} >{item.name}</h2>
-                        } else {
+                        if (acc > 3) {
                             return <h3>{item.name}</h3>
                         }
                     })
