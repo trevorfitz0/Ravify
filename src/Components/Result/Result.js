@@ -4,7 +4,7 @@ import beach from '../../Images/beach.png'
 import mountain from '../../Images/mountains.png'
 import night from '../../Images/night.png'
 
-function Result({ background, artistList }) {
+function Result({ background, artistList, loading }) {
 
     console.log(artistList)
 
@@ -15,7 +15,9 @@ function Result({ background, artistList }) {
       }[background];
 
       var acc = 0
-
+      if ( loading ) {
+        return null
+      }
   return (
     <div>
         <div className='result-background'>
