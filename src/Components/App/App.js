@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { getAccessToken, handleRedirect, logUserIn } from './../../APICalls.js'
-import { Link, NavLink, Route, navigate } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import './App.css'
 import PickBackground from '../PickBackground/PickBackground.js';
+import Result from '../Result/Result.js';
 
 
 export default class App extends Component {
@@ -12,7 +13,6 @@ export default class App extends Component {
     this.setBackground = this.setBackground.bind(this)
     this.state = {
       token: null,
-      artist: [],
       accessCode: '',
       artistList: [],
       loggedIn: false,
@@ -37,7 +37,8 @@ export default class App extends Component {
   }
 
   setBackground(backgroundSelection) {
-    this.setState({ background: backgroundSelection.background })
+    console.log('set back - ' + backgroundSelection)
+    this.setState({ background: backgroundSelection })
   }
 
   render() {
@@ -46,21 +47,32 @@ export default class App extends Component {
           <Route exact path='/' render={() => {
           return (
             <div className='login-screen'>
-              <h1 className='title'>Welcome to Ravify!</h1>
-              {this.state.loggedIn ?
-              <Link to='/home' className='main-button'>Get Started!</Link> : 
-              <div className='login-button'>
+              <h1 className='main-title'>Welcome to Ravify!</h1>
+              {this.state.loggedIn 
+              ?
+              <div className='main-button'>
+                <Link to='/background'>Get Started!</Link> 
+              </div> 
+              : 
+              <div className='main-button'>
                 <h1 onClick={() => logUserIn()} >Log In With Spotify </h1>
-                <i className="fa-brands fa-spotify fa-beat fa-xl" size="2xl" style={{color: "#ffffff",}}></i>
+                <i className="fa-brands fa-spotify fa-beat fa-xl" size="2xl" style={{color: "#ffffff"}}></i>
               </div>
               }
             </div>
           )
           }} />
-          <Route exact path='/home' render={() => {
+          <Route exact path='/background' render={() => {
           return (
             <div className='home-screen'>
               <PickBackground setBackground={ this.setBackground }/>
+            </div>
+          )
+          }} />
+          <Route path='/home' render={() => {
+          return (
+            <div>
+              <Result background={ this.state.background } artistList={ this.state.artistList }/>
             </div>
           )
           }} />
