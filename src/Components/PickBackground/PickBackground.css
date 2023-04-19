@@ -1,0 +1,39 @@
+
+.PickBackground {
+    height: 100vh;
+    padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.main-area {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.line-break {
+    width: 96vw;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--text-color);
+    margin-bottom: 3vh;
+}
+
+.images {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+img {
+    height: 50vh;
+    transition: .2s;
+}
+
+img:hover {
+    scale: 1.03;
+    cursor: pointer;
+}

@@ -1,6 +1,7 @@
 
 .title {
     font-size: 10vh;
+    color: var(--text-color);
 }
 
 .login-screen {
@@ -8,23 +9,24 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: blanchedalmond;
+    background-color: var(--background-color);
     height: 100vh;
 }
 
 .login-button {
+    color: var(--text-color);
     height: 10vh;
     min-height: 60px;
     width: 30vw;
-    min-width: 300px;
-    background-color: #1db954;
+    min-width: 400px;
+    background-color: var(--spotify-green);
     border-radius: 40px;
     transition-duration: .2s;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 13vw;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 .login-button:hover,
@@ -34,13 +36,13 @@
 }
 
 .main-button {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     height: 10vh;
     min-height: 60px;
     width: 30vw;
     min-width: 300px;
-    background-color: #1db954;
+    background-color: var(--spotify-green);
     border-radius: 40px;
     transition-duration: .2s;
     display: flex;
