@@ -7,8 +7,8 @@
 
 .main-area {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .line-break {
@@ -33,7 +33,7 @@ img {
     transition: .2s;
 }
 
-img:hover {
+.images > img:hover {
     scale: 1.03;
     cursor: pointer;
 }
