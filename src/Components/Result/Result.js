@@ -3,6 +3,7 @@ import './Result.css'
 import beach from '../../Images/beach.png'
 import mountain from '../../Images/mountains.png'
 import night from '../../Images/night.png'
+import { Link } from 'react-router-dom'
 
 function Result({ background, artistList, loading }) {
 
@@ -23,7 +24,7 @@ function Result({ background, artistList, loading }) {
         <div className='result-background'>
             <div className='main-area'>
                 <h1 className='title'>Ravify!</h1>
-                <h1>You're gonna have a good time!</h1>
+                <Link to='/background' className='header-link'>Log Out</Link>
             </div>
             <p className='line-break'></p>
             <div className='display-area'>
@@ -47,6 +48,7 @@ function Result({ background, artistList, loading }) {
                 }
                 </div>
             </div>
+            <Link to='/background' className='background-link'>Change Background</Link>
         </div>
         
     </div>

@@ -6,13 +6,14 @@
 }
 
 .result-background >.title {
-    font-size: 4rem;
+    font-size: 5rem;
     color: var(--text-color);
     margin-bottom: 3vh;
+    margin-left: 12vw;
 }
 
 .line-break {
-    width: 96vw;
+    width: 98vw;
     border-bottom: 2px solid var(--text-color);
 }
 
@@ -28,7 +29,7 @@
 }
 
 .artists {  
-    margin-top: 70px;
+    margin-top: 50px;
     height: 150px;
     max-width: 600px;
     position: absolute;
@@ -62,4 +63,34 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+}
+
+.header-link {
+    font-size: 2rem;
+    height: 7vh;
+    width: 12vw;
+    background-color: var(--spotify-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vw;
+    border-radius: 15px;
+}
+
+.background-link {
+    border-radius: 20px;
+    font-size: 2rem;
+    height: 10vh;
+    width: 20vw;
+    background-color: var(--spotify-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vw;
+    transition: .2s;
+}
+
+.header-link,
+.background-link:hover {
+    scale: 1.02;
 }
