@@ -47,12 +47,16 @@ export default class App extends Component {
           <Route exact path='/' render={() => {
           return (
             <div className='login-screen'>
-              <h1 className='title'>Welcome to Ravify!</h1>
-              {this.state.loggedIn ?
-              <Link to='/background' className='main-button'>Get Started!</Link> : 
-              <div className='login-button'>
+              <h1 className='main-title'>Welcome to Ravify!</h1>
+              {this.state.loggedIn 
+              ?
+              <div className='main-button'>
+                <Link to='/background'>Get Started!</Link> 
+              </div> 
+              : 
+              <div className='main-button'>
                 <h1 onClick={() => logUserIn()} >Log In With Spotify </h1>
-                <i className="fa-brands fa-spotify fa-beat fa-xl" size="2xl" style={{color: "#ffffff",}}></i>
+                <i className="fa-brands fa-spotify fa-beat fa-xl" size="2xl" style={{color: "#ffffff"}}></i>
               </div>
               }
             </div>

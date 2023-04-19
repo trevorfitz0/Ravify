@@ -46,7 +46,7 @@ async function handleRedirect() {
 
         const userData = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
-            headers: {
+            headers: { 
                 'Authorization': 'Basic ' + new Buffer.from(CLIENT_KEY + ':' + CLIENT_SECRET_KEY).toString('base64'),
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
@@ -57,15 +57,16 @@ async function handleRedirect() {
 
 
 
-    const result = await fetch('https://api.spotify.com/v1/me/top/artists?limit=25&offset=0', {
+    const topArtists = await fetch('https://api.spotify.com/v1/me/top/artists?limit=25&offset=0', {
         method: 'GET',
         headers: {
             'Authorization' : 'Bearer ' +  access_token
         }
     })
     
-    const data = await result.json()
-    return data
+    const topArtistData = await topArtists.json()
+    
+    return topArtistData
 }
 
 export { getAccessToken, getArtistInfo, logUserIn, handleRedirect }

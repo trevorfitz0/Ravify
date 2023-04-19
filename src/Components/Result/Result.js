@@ -15,7 +15,6 @@ function Result({ background, artistList }) {
       }[background];
 
       var acc = 0
-    
 
   return (
     <div>

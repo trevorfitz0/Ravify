@@ -1,10 +1,11 @@
 .result-background {
     height: 100vh;
     padding: 1rem;
-    background-color: var(--background-color);
+    background-image: url(../../Images/background.png);
+    background-size: cover;
 }
 
-.title {
+.result-background >.title {
     font-size: 4rem;
     color: var(--text-color);
     margin-bottom: 3vh;
@@ -27,22 +28,22 @@
 }
 
 .artists {  
-    margin-top: 80px;
+    margin-top: 70px;
     height: 150px;
     max-width: 600px;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    gap: 10px;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 35px;
   }
   
 .headliner { 
-    font-size: 50px;
+    font-size: 60px;
 }
 
 .direct-support {
@@ -53,8 +54,8 @@
 }
 
 .all-artists {
-    font-size: 15px;
-    margin-top: 210px;
+    font-size: 20px;
+    margin-top: 230px;
     position: absolute;
     display: flex;
     max-width: 500px;
