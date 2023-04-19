@@ -41,10 +41,10 @@ export default class App extends Component {
             <div className='login-screen'>
               <h1 className='title'>Welcome to Ravify!</h1>
               {this.state.loggedIn ?
-              <NavLink to='/home' className='main-button'>Get Started!</NavLink> : 
+              <Link to='/home' className='main-button'>Get Started!</Link> : 
               <div className='login-button'>
-                <h1 onClick={() => logUserIn()} className='main-button'>Log In With Spotify </h1>
-                <i class="fa-brands fa-spotify fa-beat fa-xl" beat size="2xl" style={{color: "#1e3050",}}></i>
+                <h1 onClick={() => logUserIn()} >Log In With Spotify </h1>
+                <i className="fa-brands fa-spotify fa-beat fa-xl" size="2xl" style={{color: "#1e3050",}}></i>
               </div>
               }
             </div>
