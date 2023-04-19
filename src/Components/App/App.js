@@ -16,29 +16,36 @@ export default class App extends Component {
       accessCode: '',
       artistList: [],
       loggedIn: false,
-      background: null
+      background: null,
+      loading: true
     }
   }
 
   async accessToken() {
-    // grabbing API access token
-    await getAccessToken()
-    .then(r => r.json())
-    .then(data => this.setState({ token: data.access_token }))
+    if(sessionStorage.length > 0) {
+      const retrivedData = sessionStorage.getItem('artist-data')
+      const retrivedBackground = sessionStorage.getItem('background')
+      this.setState( { artistList: JSON.parse(retrivedData), loading: false, loggedIn: true, background: retrivedBackground })
+    } else {
+      await getAccessToken()
+      .then(r => r.json())
+      .then(data => this.setState({ token: data.access_token, loading: false }))
+    }
   }
 
   async componentDidMount() {
     this.accessToken()
     if (window.location.search.length > 0) {
       const data = await handleRedirect()
-      console.log(data)
       this.setState({ artistList: data.items, loggedIn: true})
+      sessionStorage.setItem('artist-data', JSON.stringify(data.items))
     }
   }
 
   setBackground(backgroundSelection) {
     console.log('set back - ' + backgroundSelection)
     this.setState({ background: backgroundSelection })
+    sessionStorage.setItem('background', backgroundSelection)
   }
 
   render() {
@@ -72,7 +79,7 @@ export default class App extends Component {
           <Route path='/home' render={() => {
           return (
             <div>
-              <Result background={ this.state.background } artistList={ this.state.artistList }/>
+              <Result background={ this.state.background } artistList={ this.state.artistList} loading={ this.state.loading } />
             </div>
           )
           }} />
