@@ -42,7 +42,7 @@ async function handleRedirect() {
     params.append("client_id", CLIENT_KEY);
     params.append("grant_type", "authorization_code");
     params.append("code", code);
-    params.append("redirect_uri", 'redirectUrl');
+    params.append("redirect_uri", redirectUrl);
 
         const userData = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
@@ -54,6 +54,7 @@ async function handleRedirect() {
         })
         
         const { access_token } = await userData.json()
+
 
 
     const result = await fetch('https://api.spotify.com/v1/me/top/artists?limit=25&offset=0', {
