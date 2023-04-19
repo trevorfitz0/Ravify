@@ -46,7 +46,7 @@ async function handleRedirect() {
 
         const userData = await fetch('https://accounts.spotify.com/api/token', {
             method: 'POST',
-            headers: { 
+            headers: {
                 'Authorization': 'Basic ' + new Buffer.from(CLIENT_KEY + ':' + CLIENT_SECRET_KEY).toString('base64'),
                 'Content-Type': 'application/x-www-form-urlencoded'
             },

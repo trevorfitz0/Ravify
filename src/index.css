@@ -1,13 +1,19 @@
+:root {
+  --background-color: #191414;
+  --spotify-green: #1db954;
+  --text-color: #ffffff;
+}
+
 * {
   border: 0;
   margin: 0;
   padding: 0;
+  color: var(--text-color);
 }
 
 body {
   margin: 0;
-  font-family: 'Teko', sans-serif;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Bungee', cursive;
 }
 
 code {

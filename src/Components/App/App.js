@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
 import { getAccessToken, handleRedirect, logUserIn } from './../../APICalls.js'
-import { Link, NavLink, Route } from 'react-router-dom';
+import { Link, NavLink, Route, navigate } from 'react-router-dom';
 import './App.css'
+import PickBackground from '../PickBackground/PickBackground.js';
 
 
 export default class App extends Component {
   
   constructor() {
     super()
+    this.setBackground = this.setBackground.bind(this)
     this.state = {
       token: null,
       artist: [],
       accessCode: '',
       artistList: [],
-      loggedIn: false
+      loggedIn: false,
+      background: null
     }
   }
 
@@ -33,6 +36,10 @@ export default class App extends Component {
     }
   }
 
+  setBackground(backgroundSelection) {
+    this.setState({ background: backgroundSelection.background })
+  }
+
   render() {
     return (
         <div className='background'>
@@ -44,7 +51,7 @@ export default class App extends Component {
               <Link to='/home' className='main-button'>Get Started!</Link> : 
               <div className='login-button'>
                 <h1 onClick={() => logUserIn()} >Log In With Spotify </h1>
-                <i className="fa-brands fa-spotify fa-beat fa-xl" size="2xl" style={{color: "#1e3050",}}></i>
+                <i className="fa-brands fa-spotify fa-beat fa-xl" size="2xl" style={{color: "#ffffff",}}></i>
               </div>
               }
             </div>
@@ -53,7 +60,7 @@ export default class App extends Component {
           <Route exact path='/home' render={() => {
           return (
             <div className='home-screen'>
-              <h1>Welcome to Ravify!</h1>
+              <PickBackground setBackground={ this.setBackground }/>
             </div>
           )
           }} />
