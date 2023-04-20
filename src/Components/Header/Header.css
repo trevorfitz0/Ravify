@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 70px;
 }
 
 .title {
@@ -17,10 +18,12 @@
     border-bottom: 2px solid var(--text-color);
 }
 
-.header-link {
+.logout-button {
     font-size: 2rem;
     height: 7vh;
-    width: 12vw;
+    min-height: 40px;
+    width: 120px;
+    min-width: 10vw;
     background-color: var(--spotify-green);
     display: flex;
     justify-content: center;

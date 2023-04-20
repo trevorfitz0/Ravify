@@ -29,8 +29,8 @@ function Result({ background, artistList, loading, logOut}) {
                     <h1 className='headliner'>{artistList[0].name}</h1>
                     <br/>
                     <div className='direct-support'>
-                        <h2 className={`direct-1`}>{artistList[1].name || null}</h2>
-                        <h2 className={`direct-2`}>{artistList[2].name || null}</h2>
+                        <h2 className={`direct-1`}>{artistList[1].name}</h2>
+                        <h2 className={`direct-2`}>{artistList[2].name}</h2>
                     </div>
                 </div>
                 <div className='all-artists'>

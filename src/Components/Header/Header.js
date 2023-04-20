@@ -7,7 +7,7 @@ function Header({ logOut }) {
     <div>
         <div className='header'>
             <h1 className='title'>Ravify!</h1>
-            <Link to='/' onClick={() => logOut()} className='header-link'>Log Out</Link>
+            <Link to='/' onClick={() => logOut()} className='logout-button'>Log Out</Link>
         </div>
         <p className='line-break'></p>
     </div>

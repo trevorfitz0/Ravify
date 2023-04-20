@@ -9,7 +9,7 @@ import Header from '../Header/Header'
 
 function PickBackground({ setBackground, logOut }) {
   return (
-    <div className='PickBackground'>
+    <div className='background'>
         <Header logOut={ logOut }/>
           <Link to='/home'>
             <div className='images'>
