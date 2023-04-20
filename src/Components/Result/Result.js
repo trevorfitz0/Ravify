@@ -3,6 +3,7 @@ import './Result.css'
 import beach from '../../Images/beach.png'
 import mountain from '../../Images/mountains.png'
 import night from '../../Images/night.png'
+import city from '../../Images/city.png'
 import { Link } from 'react-router-dom'
 import Header from '../Header/Header'
 
@@ -11,7 +12,8 @@ function Result({ background, artistList, loading, logOut}) {
     const backgroundImage = {
         beach,
         mountain,
-        night
+        night,
+        city
       }[background];
 
       var acc = 0
@@ -23,7 +25,7 @@ function Result({ background, artistList, loading, logOut}) {
     <div>
         <div className='home-background'>
             <Header logOut={ logOut }/>
-            <div className='display-area'>
+            <div className='poster'>
                 <img className='final-poster' alt='final poster' src={ backgroundImage }></img>
                 <div className='artists'>
                     <h1 className='headliner'>{artistList[0].name}</h1>

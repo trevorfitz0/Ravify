@@ -1,6 +1,5 @@
 
 .background {
-    padding: 1rem;
     background-image: url(../../Images/background.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,7 +14,8 @@
 }
 
 .images {
-    margin-top: 10vh;
+    margin-top: 5vh;
+    padding: 20px;
 }
 
 .background-text {
@@ -25,18 +25,18 @@
     font-size: 3vh;
 }
 
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1300px) {
     .background {
         height: 100vh;
     }
     .images {
-        margin-top: 10vh;
+        margin-top: 5vh;
         display: flex;
         justify-content: space-between;
     }
   }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1300px) {
     .images {
         margin-top: 10vh;
         display: flex;
@@ -49,9 +49,7 @@
 img {
     height: 50vh;
     transition: .2s;
-    box-shadow: 0px 11px 82px -149px rgba(255,255,255,0.75);
-    -webkit-box-shadow: 0px 11px 82px -149px rgba(255,255,255,0.75);
-    -moz-box-shadow: 0px 11px 82px -149px rgba(255,255,255,0.75);
+    box-shadow: 0px 11px 82px -50px rgba(255,255,255,0.75);
 }
 
 .images > img:hover {
