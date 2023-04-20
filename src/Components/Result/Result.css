@@ -20,7 +20,7 @@
 .display-area {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     margin-top: 5vh;
 }
 
@@ -75,9 +75,11 @@
     align-items: center;
     margin-bottom: 1vw;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .background-link {
+    position: absolute;
     border-radius: 20px;
     font-size: 2rem;
     height: 10vh;
@@ -88,9 +90,10 @@
     align-items: center;
     margin-bottom: 1vw;
     transition: .2s;
+    float: left;
 }
 
-.header-link,
+.header-link:hover,
 .background-link:hover {
     scale: 1.02;
 }

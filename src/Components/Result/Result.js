@@ -5,9 +5,7 @@ import mountain from '../../Images/mountains.png'
 import night from '../../Images/night.png'
 import { Link } from 'react-router-dom'
 
-function Result({ background, artistList, loading }) {
-
-    console.log(artistList)
+function Result({ background, artistList, loading, logOut}) {
 
     const backgroundImage = {
         beach,
@@ -16,15 +14,16 @@ function Result({ background, artistList, loading }) {
       }[background];
 
       var acc = 0
+
       if ( loading ) {
         return null
-      }
+      } else {
   return (
     <div>
         <div className='result-background'>
             <div className='main-area'>
                 <h1 className='title'>Ravify!</h1>
-                <Link to='/background' className='header-link'>Log Out</Link>
+                <Link to='/' onClick={() => logOut()} className='header-link'>Log Out</Link>
             </div>
             <p className='line-break'></p>
             <div className='display-area'>
@@ -33,8 +32,8 @@ function Result({ background, artistList, loading }) {
                     <h1 className='headliner'>{artistList[0].name}</h1>
                     <br/>
                     <div className='direct-support'>
-                        <h2 className={`direct-1`}>{artistList[1].name}</h2>
-                        <h2 className={`direct-2`}>{artistList[2].name}</h2>
+                        <h2 className={`direct-1`}>{artistList[1].name || null}</h2>
+                        <h2 className={`direct-2`}>{artistList[2].name || null}</h2>
                     </div>
                 </div>
                 <div className='all-artists'>
@@ -53,6 +52,7 @@ function Result({ background, artistList, loading }) {
         
     </div>
   )
+            }
 }
 
 export default Result

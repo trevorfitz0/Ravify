@@ -11,6 +11,7 @@ export default class App extends Component {
   constructor() {
     super()
     this.setBackground = this.setBackground.bind(this)
+    this.logOut = this.logOut.bind(this)
     this.state = {
       token: null,
       accessCode: '',
@@ -43,9 +44,13 @@ export default class App extends Component {
   }
 
   setBackground(backgroundSelection) {
-    console.log('set back - ' + backgroundSelection)
     this.setState({ background: backgroundSelection })
     sessionStorage.setItem('background', backgroundSelection)
+  }
+
+  logOut() {
+    sessionStorage.clear()
+    this.setState({ loggedIn: false})
   }
 
   render() {
@@ -76,10 +81,10 @@ export default class App extends Component {
             </div>
           )
           }} />
-          <Route path='/home' render={() => {
+          <Route exact path='/home' render={() => {
           return (
             <div>
-              <Result background={ this.state.background } artistList={ this.state.artistList} loading={ this.state.loading } />
+              <Result background={ this.state.background } artistList={ this.state.artistList} loading={ this.state.loading } logOut={ this.logOut} />
             </div>
           )
           }} />
