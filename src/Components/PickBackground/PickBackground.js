@@ -11,6 +11,9 @@ function PickBackground({ setBackground, logOut }) {
   return (
     <div className='background'>
         <Header logOut={ logOut }/>
+        <div className='background-text'>
+          <h1>Pick A Background</h1>
+        </div>
           <Link to='/home'>
             <div className='images'>
               <img alt='beach' src={beachImage} onClick={() => setBackground('beach')}></img>

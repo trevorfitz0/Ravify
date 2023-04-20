@@ -21,7 +21,7 @@
 .logout-button {
     font-size: 2rem;
     height: 7vh;
-    min-height: 40px;
+    min-height: 60px;
     width: 120px;
     min-width: 10vw;
     background-color: var(--spotify-green);

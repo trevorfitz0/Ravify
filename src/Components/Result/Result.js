@@ -21,7 +21,7 @@ function Result({ background, artistList, loading, logOut}) {
       } else {
   return (
     <div>
-        <div className='result-background'>
+        <div className='home-background'>
             <Header logOut={ logOut }/>
             <div className='display-area'>
                 <img className='final-poster' alt='final poster' src={ backgroundImage }></img>
@@ -44,7 +44,7 @@ function Result({ background, artistList, loading, logOut}) {
                 }
                 </div>
             </div>
-            <Link to='/background' className='background-link'>Change Background</Link>
+            <Link to='/background' className='change-background-button'>Change Background</Link>
         </div>
         
     </div>
