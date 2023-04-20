@@ -77,14 +77,14 @@ export default class App extends Component {
           <Route exact path='/background' render={() => {
           return (
             <div className='home-screen'>
-              <PickBackground setBackground={ this.setBackground }/>
+              <PickBackground setBackground={ this.setBackground  } logOut={ this.logOut }/>
             </div>
           )
           }} />
           <Route exact path='/home' render={() => {
           return (
             <div>
-              <Result background={ this.state.background } artistList={ this.state.artistList} loading={ this.state.loading } logOut={ this.logOut} />
+              <Result background={ this.state.background } artistList={ this.state.artistList} loading={ this.state.loading } logOut={ this.logOut } />
             </div>
           )
           }} />
