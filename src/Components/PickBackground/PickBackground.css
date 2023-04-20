@@ -1,7 +1,7 @@
 
-.PickBackground {
+.background {
     height: 100vh;
-    padding: 2rem;
+    padding: 1rem;
     background-image: url(../../Images/background.png);
     background-size: cover;
 }
@@ -12,23 +12,17 @@
     align-items: center;
 }
 
-.line-break {
-    width: 96vw;
-    border-bottom: 2px solid var(--text-color);
-}
-
-.PickBackground > .title {
-    font-size: 3rem;
-    color: var(--text-color);
-    margin-bottom: 3vh;
-    margin-left: 12vw;
-}
-
 .images {
     margin-top: 10vh;
-    display: flex;
-    justify-content: space-between;
 }
+
+@media only screen and (min-width: 800px) {
+    .images {
+        margin-top: 10vh;
+        display: flex;
+        justify-content: space-between;
+    }
+  }
 
 img {
     height: 50vh;

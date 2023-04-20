@@ -5,15 +5,12 @@ import beachImage from '../../Images/beach.png'
 import mountainImage from '../../Images/mountains.png'
 import night from '../../Images/night.png'
 import { Link } from 'react-router-dom'
+import Header from '../Header/Header'
 
-function PickBackground({ setBackground }) {
+function PickBackground({ setBackground, logOut }) {
   return (
-    <div className='PickBackground'>
-        <div className='main-area'>
-          <h1 className='title'>Ravify!</h1>
-            <h1>Pick a Background</h1>
-        </div>
-        <p className='line-break'></p>
+    <div className='background'>
+        <Header logOut={ logOut }/>
           <Link to='/home'>
             <div className='images'>
               <img alt='beach' src={beachImage} onClick={() => setBackground('beach')}></img>

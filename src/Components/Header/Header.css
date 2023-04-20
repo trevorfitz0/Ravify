@@ -1,0 +1,35 @@
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 3vh;
+    margin-left: 1vw;
+}
+
+.line-break {
+    width: 98vw;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.logout-button {
+    font-size: 2rem;
+    height: 7vh;
+    min-height: 40px;
+    width: 120px;
+    min-width: 10vw;
+    background-color: var(--spotify-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
+    border-radius: 15px;
+    cursor: pointer;
+}
