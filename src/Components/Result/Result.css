@@ -1,9 +1,13 @@
-.result-background {
+.home-background {
     height: 100vh;
     padding: 1rem;
     background-image: url(../../Images/background.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 
 .line-break {
     width: 98vw;
@@ -17,12 +21,14 @@
     margin-top: 5vh;
 }
 
-.background-link {
+.change-background-button {
     position: absolute;
     border-radius: 20px;
     font-size: 2rem;
     height: 10vh;
+    min-height: 50px;
     width: 20vw;
+    min-width: 300px;
     background-color: var(--spotify-green);
     display: flex;
     justify-content: center;

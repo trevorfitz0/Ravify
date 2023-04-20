@@ -1,9 +1,11 @@
 
 .background {
-    height: 100vh;
     padding: 1rem;
     background-image: url(../../Images/background.png);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .main-area {
@@ -16,11 +18,31 @@
     margin-top: 10vh;
 }
 
-@media only screen and (min-width: 800px) {
+.background-text {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    font-size: 3vh;
+}
+
+@media only screen and (min-width: 1500px) {
+    .background {
+        height: 100vh;
+    }
     .images {
         margin-top: 10vh;
         display: flex;
         justify-content: space-between;
+    }
+  }
+
+@media only screen and (max-width: 1500px) {
+    .images {
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
     }
   }
 
