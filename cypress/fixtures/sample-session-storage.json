@@ -1,0 +1,911 @@
+[
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1VPmR4DJC1PlOtd0IADAO0"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "dark trap",
+        "new orleans rap",
+        "underground hip hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1VPmR4DJC1PlOtd0IADAO0",
+      "id": "1VPmR4DJC1PlOtd0IADAO0",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb7c0ac3d8381968ae99ce6736",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051747c0ac3d8381968ae99ce6736",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1787c0ac3d8381968ae99ce6736",
+          "width": 160
+        }
+      ],
+      "name": "$uicideboy$",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:1VPmR4DJC1PlOtd0IADAO0"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2FTj5ijy8lP59d2V9dHR6I"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "glitch hop",
+        "vapor twitch"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2FTj5ijy8lP59d2V9dHR6I",
+      "id": "2FTj5ijy8lP59d2V9dHR6I",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eba41b57944614842146d5aa42",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174a41b57944614842146d5aa42",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178a41b57944614842146d5aa42",
+          "width": 160
+        }
+      ],
+      "name": "CharlestheFirst",
+      "popularity": 43,
+      "type": "artist",
+      "uri": "spotify:artist:2FTj5ijy8lP59d2V9dHR6I"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6JU4RsXcN7rLafs39HwFxf"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "experimental bass"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6JU4RsXcN7rLafs39HwFxf",
+      "id": "6JU4RsXcN7rLafs39HwFxf",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6647bb61d6fa3a9445251b2f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746647bb61d6fa3a9445251b2f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786647bb61d6fa3a9445251b2f",
+          "width": 160
+        }
+      ],
+      "name": "Mersiv",
+      "popularity": 42,
+      "type": "artist",
+      "uri": "spotify:artist:6JU4RsXcN7rLafs39HwFxf"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1496XxkytEk26FUJLfpVZr"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "downtempo bass",
+        "electra",
+        "glitch hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1496XxkytEk26FUJLfpVZr",
+      "id": "1496XxkytEk26FUJLfpVZr",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb56b14314f8491c353379887",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174b56b14314f8491c353379887",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178b56b14314f8491c353379887",
+          "width": 160
+        }
+      ],
+      "name": "CloZee",
+      "popularity": 52,
+      "type": "artist",
+      "uri": "spotify:artist:1496XxkytEk26FUJLfpVZr"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1bDXdxSg3Ve7V7f3bteIyk"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "vapor twitch"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1bDXdxSg3Ve7V7f3bteIyk",
+      "id": "1bDXdxSg3Ve7V7f3bteIyk",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb792e4e58e39cc296da45da7d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174792e4e58e39cc296da45da7d",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178792e4e58e39cc296da45da7d",
+          "width": 160
+        }
+      ],
+      "name": "Dreamers Delight",
+      "popularity": 45,
+      "type": "artist",
+      "uri": "spotify:artist:1bDXdxSg3Ve7V7f3bteIyk"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/67qogtRNI0GjUr8PlaG6Zh"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "canadian electronic",
+        "dubstep",
+        "edm",
+        "electro house",
+        "progressive electro house"
+      ],
+      "href": "https://api.spotify.com/v1/artists/67qogtRNI0GjUr8PlaG6Zh",
+      "id": "67qogtRNI0GjUr8PlaG6Zh",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb8f9c9739f2bbee96365a4b23",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051748f9c9739f2bbee96365a4b23",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1788f9c9739f2bbee96365a4b23",
+          "width": 160
+        }
+      ],
+      "name": "Zeds Dead",
+      "popularity": 63,
+      "type": "artist",
+      "uri": "spotify:artist:67qogtRNI0GjUr8PlaG6Zh"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1JPy5PsJtkhftfdr6saN2i"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "bass music",
+        "breakbeat",
+        "brostep",
+        "edm",
+        "glitch hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1JPy5PsJtkhftfdr6saN2i",
+      "id": "1JPy5PsJtkhftfdr6saN2i",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe1aac5a59f6fe28130b396d4",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174e1aac5a59f6fe28130b396d4",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178e1aac5a59f6fe28130b396d4",
+          "width": 160
+        }
+      ],
+      "name": "Bassnectar",
+      "popularity": 54,
+      "type": "artist",
+      "uri": "spotify:artist:1JPy5PsJtkhftfdr6saN2i"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/4FXGRMSHh2JjHxVwS8dhH1"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "complextro",
+        "dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/4FXGRMSHh2JjHxVwS8dhH1",
+      "id": "4FXGRMSHh2JjHxVwS8dhH1",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6c406665423f5eac0024e689",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746c406665423f5eac0024e689",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786c406665423f5eac0024e689",
+          "width": 160
+        }
+      ],
+      "name": "Virtual Riot",
+      "popularity": 53,
+      "type": "artist",
+      "uri": "spotify:artist:4FXGRMSHh2JjHxVwS8dhH1"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1soJ22UMyjIw6SYFtoFJwe"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "downtempo",
+        "glitch hop",
+        "nu skool breaks",
+        "psybass"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1soJ22UMyjIw6SYFtoFJwe",
+      "id": "1soJ22UMyjIw6SYFtoFJwe",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb114a84ddd47049c9046dcf26",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174114a84ddd47049c9046dcf26",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178114a84ddd47049c9046dcf26",
+          "width": 160
+        }
+      ],
+      "name": "Tipper",
+      "popularity": 42,
+      "type": "artist",
+      "uri": "spotify:artist:1soJ22UMyjIw6SYFtoFJwe"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6nxWCVXbOlEVRexSbLsTer"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "australian dance",
+        "australian electropop",
+        "australian indie",
+        "downtempo",
+        "edm",
+        "indietronica"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6nxWCVXbOlEVRexSbLsTer",
+      "id": "6nxWCVXbOlEVRexSbLsTer",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebdcbf7ddf047dd267e4de8978",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174dcbf7ddf047dd267e4de8978",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178dcbf7ddf047dd267e4de8978",
+          "width": 160
+        }
+      ],
+      "name": "Flume",
+      "popularity": 73,
+      "type": "artist",
+      "uri": "spotify:artist:6nxWCVXbOlEVRexSbLsTer"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5FKchcZpQOkqFvXBj1aCvb"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "canadian electronic"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5FKchcZpQOkqFvXBj1aCvb",
+      "id": "5FKchcZpQOkqFvXBj1aCvb",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb11d1a065d36d1577fbe82ffa",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517411d1a065d36d1577fbe82ffa",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17811d1a065d36d1577fbe82ffa",
+          "width": 160
+        }
+      ],
+      "name": "Excision",
+      "popularity": 62,
+      "type": "artist",
+      "uri": "spotify:artist:5FKchcZpQOkqFvXBj1aCvb"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3vEB8waEuotMryL5qSs2rF"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/3vEB8waEuotMryL5qSs2rF",
+      "id": "3vEB8waEuotMryL5qSs2rF",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb0af04fef5de95ba3c8233542",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051740af04fef5de95ba3c8233542",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1780af04fef5de95ba3c8233542",
+          "width": 160
+        }
+      ],
+      "name": "ception",
+      "popularity": 0,
+      "type": "artist",
+      "uri": "spotify:artist:3vEB8waEuotMryL5qSs2rF"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3NJ94iuAmmMjbszODYT6pO"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3NJ94iuAmmMjbszODYT6pO",
+      "id": "3NJ94iuAmmMjbszODYT6pO",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebda3630f6732d14437a4ab33d",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174da3630f6732d14437a4ab33d",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178da3630f6732d14437a4ab33d",
+          "width": 160
+        }
+      ],
+      "name": "Subtronics",
+      "popularity": 63,
+      "type": "artist",
+      "uri": "spotify:artist:3NJ94iuAmmMjbszODYT6pO"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5AoXSiM511L4To0AN5oZVB"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "glitch hop"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5AoXSiM511L4To0AN5oZVB",
+      "id": "5AoXSiM511L4To0AN5oZVB",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb5d578783659cd977b3f58531",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051745d578783659cd977b3f58531",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1785d578783659cd977b3f58531",
+          "width": 160
+        }
+      ],
+      "name": "Space Jesus",
+      "popularity": 42,
+      "type": "artist",
+      "uri": "spotify:artist:5AoXSiM511L4To0AN5oZVB"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6hBrJJrcYoNhvLC6KaFR4b"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "dubstep",
+        "gaming dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6hBrJJrcYoNhvLC6KaFR4b",
+      "id": "6hBrJJrcYoNhvLC6KaFR4b",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebb3039e15ec053d282728487e",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174b3039e15ec053d282728487e",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178b3039e15ec053d282728487e",
+          "width": 160
+        }
+      ],
+      "name": "Eliminate",
+      "popularity": 47,
+      "type": "artist",
+      "uri": "spotify:artist:6hBrJJrcYoNhvLC6KaFR4b"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7muzHifhMdnfN1xncRLOqk"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "classic dubstep",
+        "complextro",
+        "edm",
+        "electro house"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7muzHifhMdnfN1xncRLOqk",
+      "id": "7muzHifhMdnfN1xncRLOqk",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe8f680e2f2e144f667b5fbda",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174e8f680e2f2e144f667b5fbda",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178e8f680e2f2e144f667b5fbda",
+          "width": 160
+        }
+      ],
+      "name": "Flux Pavilion",
+      "popularity": 57,
+      "type": "artist",
+      "uri": "spotify:artist:7muzHifhMdnfN1xncRLOqk"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3T0BepBNnd3kw2m10rh8yW"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "experimental bass"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3T0BepBNnd3kw2m10rh8yW",
+      "id": "3T0BepBNnd3kw2m10rh8yW",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebca0212a4fce1a79cbc84dd15",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174ca0212a4fce1a79cbc84dd15",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178ca0212a4fce1a79cbc84dd15",
+          "width": 160
+        }
+      ],
+      "name": "TVBOO",
+      "popularity": 39,
+      "type": "artist",
+      "uri": "spotify:artist:3T0BepBNnd3kw2m10rh8yW"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/45eNHdiiabvmbp4erw26rg"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "edm",
+        "melodic dubstep",
+        "pop dance"
+      ],
+      "href": "https://api.spotify.com/v1/artists/45eNHdiiabvmbp4erw26rg",
+      "id": "45eNHdiiabvmbp4erw26rg",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb81a0ab3a9a4326929a01b0f1",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517481a0ab3a9a4326929a01b0f1",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17881a0ab3a9a4326929a01b0f1",
+          "width": 160
+        }
+      ],
+      "name": "ILLENIUM",
+      "popularity": 74,
+      "type": "artist",
+      "uri": "spotify:artist:45eNHdiiabvmbp4erw26rg"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2u01kCKA5wDvvztuH8lyT0"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "deathstep",
+        "dubstep",
+        "riddim dubstep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2u01kCKA5wDvvztuH8lyT0",
+      "id": "2u01kCKA5wDvvztuH8lyT0",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebe963f905506dcad071c96694",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174e963f905506dcad071c96694",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178e963f905506dcad071c96694",
+          "width": 160
+        }
+      ],
+      "name": "SVDDEN DEATH",
+      "popularity": 54,
+      "type": "artist",
+      "uri": "spotify:artist:2u01kCKA5wDvvztuH8lyT0"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/7vfvYuEyJbh1Tf3QlOTAmZ"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "downtempo bass"
+      ],
+      "href": "https://api.spotify.com/v1/artists/7vfvYuEyJbh1Tf3QlOTAmZ",
+      "id": "7vfvYuEyJbh1Tf3QlOTAmZ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eba2afeafa931e1d20afc59659",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174a2afeafa931e1d20afc59659",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178a2afeafa931e1d20afc59659",
+          "width": 160
+        }
+      ],
+      "name": "Ravenscoon",
+      "popularity": 40,
+      "type": "artist",
+      "uri": "spotify:artist:7vfvYuEyJbh1Tf3QlOTAmZ"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/18Eu7uJEMPWwwt1QUdCglQ"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/18Eu7uJEMPWwwt1QUdCglQ",
+      "id": "18Eu7uJEMPWwwt1QUdCglQ",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebddfaf42826804a5a16671547",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174ddfaf42826804a5a16671547",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178ddfaf42826804a5a16671547",
+          "width": 160
+        }
+      ],
+      "name": "INZO",
+      "popularity": 51,
+      "type": "artist",
+      "uri": "spotify:artist:18Eu7uJEMPWwwt1QUdCglQ"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3Hrqjumb6WHg2aAUHJHLND"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3Hrqjumb6WHg2aAUHJHLND",
+      "id": "3Hrqjumb6WHg2aAUHJHLND",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb9c3a088b53775fe1c1593c9f",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051749c3a088b53775fe1c1593c9f",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1789c3a088b53775fe1c1593c9f",
+          "width": 160
+        }
+      ],
+      "name": "LSDREAM",
+      "popularity": 50,
+      "type": "artist",
+      "uri": "spotify:artist:3Hrqjumb6WHg2aAUHJHLND"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/1a6oIpEh4DGgaqgWg5xwd3"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep"
+      ],
+      "href": "https://api.spotify.com/v1/artists/1a6oIpEh4DGgaqgWg5xwd3",
+      "id": "1a6oIpEh4DGgaqgWg5xwd3",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb6a093f3ca0f5e122e964b590",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051746a093f3ca0f5e122e964b590",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1786a093f3ca0f5e122e964b590",
+          "width": 160
+        }
+      ],
+      "name": "Ganja White Night",
+      "popularity": 52,
+      "type": "artist",
+      "uri": "spotify:artist:1a6oIpEh4DGgaqgWg5xwd3"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3QryVD03gGZOLQQXjy3EoA"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "brostep",
+        "dark trap"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3QryVD03gGZOLQQXjy3EoA",
+      "id": "3QryVD03gGZOLQQXjy3EoA",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb82504d534c072b1d72e38a8c",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517482504d534c072b1d72e38a8c",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17882504d534c072b1d72e38a8c",
+          "width": 160
+        }
+      ],
+      "name": "Getter",
+      "popularity": 59,
+      "type": "artist",
+      "uri": "spotify:artist:3QryVD03gGZOLQQXjy3EoA"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/25oLRSUjJk4YHNUsQXk7Ut"
+      },
+      "followers": {
+        "href": null,
+        "total": 0
+      },
+      "genres": [
+        "jamtronica",
+        "jazztronica",
+        "livetronica"
+      ],
+      "href": "https://api.spotify.com/v1/artists/25oLRSUjJk4YHNUsQXk7Ut",
+      "id": "25oLRSUjJk4YHNUsQXk7Ut",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb70fa7f3e6cb3df4c100fd43a",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517470fa7f3e6cb3df4c100fd43a",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17870fa7f3e6cb3df4c100fd43a",
+          "width": 160
+        }
+      ],
+      "name": "GRiZ",
+      "popularity": 60,
+      "type": "artist",
+      "uri": "spotify:artist:25oLRSUjJk4YHNUsQXk7Ut"
+    }
+  ]

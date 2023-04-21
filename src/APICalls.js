@@ -4,16 +4,18 @@ import { Buffer } from "buffer"
 const CLIENT_KEY="fb4afd85ed844f4e8ff547fabca80098"
 const CLIENT_SECRET_KEY="0deb4056e7df4c5692f9b1228fc3065f"
 const redirectUrl = 'http://localhost:3000/callback'
-const topArtists = `https://api.spotify.com/v1/me/top/artists`
+const topArtistsFetch = `https://api.spotify.com/v1/me/top/artists?limit=25&offset=0`
+
+// &time_range=short_term
 
 function getAccessToken() {
     return fetch('https://accounts.spotify.com/api/token', {
-    method: 'POST',
-    body: 'grant_type=client_credentials&client_id=' + CLIENT_KEY + '&client_secret=' + CLIENT_SECRET_KEY,
-    headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-    }
-})
+        method: 'POST',
+        body: 'grant_type=client_credentials&client_id=' + CLIENT_KEY + '&client_secret=' + CLIENT_SECRET_KEY,
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    })
 }
 
 function getArtistInfo(accessToken, id) {
@@ -57,7 +59,7 @@ async function handleRedirect() {
 
 
 
-    const topArtists = await fetch('https://api.spotify.com/v1/me/top/artists?limit=25&offset=0&time_range=long_term', {
+    const topArtists = await fetch(topArtistsFetch, {
         method: 'GET',
         headers: {
             'Authorization' : 'Bearer ' +  access_token
