@@ -5,6 +5,8 @@ Ravify is a react Application which is centralized around the spotify for devs A
 ## Project Viewing
 Unfortunately, since the app uses Secret API Keys through Spotify's API, it's unable to be pulled down and run locally. 
 
+A Spotify is REQUIRED to run this application, if you would like to see the app's functionality without one you can use the cypress tests.
+
 <details>
 <summary> <h2>Preview</h2> </summary>
 <br>
