@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+<h1 align=center>Ravify</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Abstract
+Ravify is a react Application which is centralized around the spotify for devs API. The main goal of this Application is to first log a user in using their spotify account then grab their top artist data from all time. Once the Artist data is retrived the application lets the user choose between 1 of 3 backdrops for their lineup then places their favortie artists in a festival lineup style on top of the backdrop.
+## Project Viewing
+Unfortunately, since the app uses Secret API Keys through Spotify's API, it's unable to be pulled down and run locally. 
 
-## Available Scripts
+<details>
+<summary> <h2>Preview</h2> </summary>
+<br>
 
-In the project directory, you can run:
+Home Page
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Backdrop Selection
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+Login Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+</details>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Context
+This application is our Mod 3 Final solo project, and I worked on it for roughly 20 hours.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Learning Goals
+- Learn how to use the spotify API
+- Challenge my css skills with organizing lots of elements in a small place
+- Create a multi-page UX utilizing React Router.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Wins + Challenges
+- Creating a very good looking festival lineup that is easily accessable for every spotify user
+- A large challenge was Spotify's authentication, it takes about 4 rounds of API fetch's to get to the point where I have a users data
+- One large challenge I am still working on is figuring out how to download the festival lineup as a PNG. I have found solutions but the way I wrote my code is making it a lot harder, I will maybe try converting the final product to a canvas to fix this issue.
