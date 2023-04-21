@@ -39,6 +39,7 @@ export default class App extends Component {
     if (window.location.search.length > 0) {
       const data = await handleRedirect()
       this.setState({ artistList: data.items, loggedIn: true})
+      console.log(data.items)
       sessionStorage.setItem('artist-data', JSON.stringify(data.items))
     }
   }
