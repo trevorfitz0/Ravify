@@ -10,6 +10,7 @@ Unfortunately, since the app uses Secret API Keys through Spotify's API, it's un
 <br>
 
 Home Page
+<img width="1423" alt="Screenshot 2023-04-21 at 12 58 41 AM" src="https://user-images.githubusercontent.com/57536985/233563653-160557e7-1603-49b5-8b6a-1111520aee5c.png">
 
 
 Backdrop Selection
@@ -22,7 +23,7 @@ Login Page
 
 
 ## Context
-This application is our Mod 3 Final solo project, and I worked on it for roughly 20 hours.
+This application is my Mod 3 Final solo project, and I worked on it for roughly 20 hours.
 
 ## Learning Goals
 - Learn how to use the spotify API
