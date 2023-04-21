@@ -5,6 +5,7 @@ import beachImage from '../../Images/beach.png'
 import mountainImage from '../../Images/mountains.png'
 import nightImage from '../../Images/night.png'
 import cityImage from '../../Images/city.png'
+import nightForestImage from '../../Images/night-forest.png'
 import { Link } from 'react-router-dom'
 import Header from '../Header/Header'
 
@@ -19,7 +20,7 @@ function PickBackground({ setBackground, logOut }) {
             <div className='images'>
               <img alt='beach' src={beachImage} onClick={() => setBackground('beach')}></img>
               <img alt='mountain' src={mountainImage} onClick={() => setBackground('mountain')}></img>
-              <img alt='night' src={nightImage} onClick={() => setBackground('night')}></img>
+              <img alt='night' src={nightForestImage} onClick={() => setBackground('nightForest')}></img>
             </div>
           </Link>
     </div>

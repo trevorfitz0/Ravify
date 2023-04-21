@@ -4,6 +4,7 @@ import beach from '../../Images/beach.png'
 import mountain from '../../Images/mountains.png'
 import night from '../../Images/night.png'
 import city from '../../Images/city.png'
+import nightForest from '../../Images/night-forest.png'
 import { Link } from 'react-router-dom'
 import Header from '../Header/Header'
 
@@ -13,7 +14,8 @@ function Result({ background, artistList, loading, logOut}) {
         beach,
         mountain,
         night,
-        city
+        city,
+        nightForest
       }[background];
 
       var acc = 0
