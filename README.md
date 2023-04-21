@@ -14,9 +14,11 @@ Home Page
 
 
 Backdrop Selection
+<img width="1423" alt="Screenshot 2023-04-21 at 12 59 25 AM" src="https://user-images.githubusercontent.com/57536985/233563776-bb7d4a43-d7d1-4a36-b193-e0f3e1ee3bf6.png">
 
 
-Login Page
+Lineup display page
+<img width="1422" alt="Screenshot 2023-04-21 at 1 00 01 AM" src="https://user-images.githubusercontent.com/57536985/233563883-a08cfe13-5c14-4e75-bf65-277cf22cfb62.png">
 
 
 </details>
