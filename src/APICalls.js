@@ -57,7 +57,7 @@ async function handleRedirect() {
 
 
 
-    const topArtists = await fetch('https://api.spotify.com/v1/me/top/artists?limit=25&offset=0', {
+    const topArtists = await fetch('https://api.spotify.com/v1/me/top/artists?limit=25&offset=0&time_range=long_term', {
         method: 'GET',
         headers: {
             'Authorization' : 'Bearer ' +  access_token
