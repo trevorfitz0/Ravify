@@ -3,7 +3,9 @@
 ## Abstract
 Ravify is a react Application which is centralized around the spotify for devs API. The main goal of this Application is to first log a user in using their spotify account then grab their top artist data from all time. Once the Artist data is retrived the application lets the user choose between 1 of 3 backdrops for their lineup then places their favortie artists in a festival lineup style on top of the backdrop.
 ## Project Viewing
-Unfortunately, since the app uses Secret API Keys through Spotify's API, it's unable to be pulled down and run locally. 
+Unfortunately, since the app uses Secret API Keys through Spotify's API, it's unable to be pulled down and run locally unless I give you the API keys. 
+
+The project can be viewed [Here](https://ravify.vercel.app/ "Here)
 
 A Spotify is REQUIRED to run this application, if you would like to see the app's functionality without one you can use the cypress tests.
 
