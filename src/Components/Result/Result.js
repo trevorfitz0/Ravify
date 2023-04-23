@@ -46,7 +46,7 @@ function Result({ background, artistList, loading, logOut}) {
                         }
                     })
                 }
-                <i className="fa-brands fa-spotify fa-beat fa-xl" id='spotify-logo' size="2xl" style={{color: "#ffffff"}}></i>
+                <i className="fa-brands fa-spotify fa-xl" id='spotify-logo' size="2xl" style={{color: "#ffffff"}}></i>
                 </div>
             </div>
             <Link to='/background' className='change-background-button'>Change Background</Link>
