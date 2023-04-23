@@ -26,7 +26,7 @@ function getArtistInfo(accessToken, id) {
 
 function logUserIn() {
 
-    var params = `?client_id=${REACT_APP_CLIENT_KEY}&response_type=code&redirect_uri=${ encodeURI(redirectUrl)}&show_dialog=true&&scope=user-read-private user-top-read playlist-read-private playlist-read-collaborative`
+    var params = `?client_id=${REACT_APP_CLIENT_KEY}&response_type=code&redirect_uri=${ encodeURI(redirectUrl)}&show_dialog=true&&scope=user-read-private user-top-read`
 
     window.location.href = 'https://accounts.spotify.com/authorize' + params
 }
