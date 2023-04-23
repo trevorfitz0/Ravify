@@ -4,7 +4,7 @@ import { Buffer } from "buffer"
 const CLIENT_KEY="fb4afd85ed844f4e8ff547fabca80098"
 const CLIENT_SECRET_KEY="0deb4056e7df4c5692f9b1228fc3065f"
 const redirectUrl = 'http://localhost:3000/callback'
-const topArtistsFetch = `https://api.spotify.com/v1/me/top/artists?limit=25&offset=0`
+const topArtistsFetch = `https://api.spotify.com/v1/me/top/artists?limit=25&offset=0&time_range=long_term`
 
 // &time_range=short_term
 
@@ -67,6 +67,9 @@ async function handleRedirect() {
     })
     
     const topArtistData = await topArtists.json()
+    if(topArtistData.limit < 10) {
+        return "no data"
+    }
     
     return topArtistData
 }
