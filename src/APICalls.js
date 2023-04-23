@@ -2,7 +2,7 @@ import { Buffer } from "buffer"
 
 const  { REACT_APP_CLIENT_KEY, REACT_APP_CLIENT_SECRET_KEY } = process.env
 
-const redirectUrl = 'http://localhost:3000/callback'
+const redirectUrl = 'https://ravify.vercel.app/callback'
 const topArtistsFetch = `https://api.spotify.com/v1/me/top/artists?limit=25&offset=0&time_range=long_term`
 
 function getAccessToken() {
