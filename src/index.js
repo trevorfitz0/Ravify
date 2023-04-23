@@ -5,7 +5,6 @@ import App from './Components/App/App.js'
 import reportWebVitals from './reportWebVitals';
 import { HashRouter as Router } from 'react-router-dom';
 
-// const dotenv = require("dotenv")
 
 // dotenv.config()
 

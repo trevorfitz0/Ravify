@@ -35,7 +35,6 @@ export default class App extends Component {
   }
 
   cypressCheck() {
-
     const check = sessionStorage.getItem('user-login-testing')
 
     if (window.Cypress && check === null) {
@@ -47,13 +46,10 @@ export default class App extends Component {
   async componentDidMount() {
     this.cypressCheck()
     this.accessToken()
-    const retrivedData = sessionStorage.getItem('artist-data')
     if (window.location.search.length > 0) {
       const data = await handleRedirect()
-      console.log(data)
       if(data !== 'no data') {
         this.setState({ artistList: data.items, loggedIn: true})
-        console.log(data.items)
         sessionStorage.setItem('artist-data', JSON.stringify(data.items))
       }
     }
