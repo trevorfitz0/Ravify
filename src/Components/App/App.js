@@ -48,7 +48,7 @@ export default class App extends Component {
     this.accessToken()
     const url = window.location.search
     const urlParams = new URLSearchParams(url)
-    if (urlParams.get('code')) {
+    if (urlParams.get('code') !== null) {
       const data = await handleRedirect()
       if(data !== 'no data') {
         this.setState({ artistList: data.items, loggedIn: true})
