@@ -5,7 +5,7 @@ Ravify is a react Application which is centralized around the spotify for devs A
 ## Project Viewing
 Unfortunately, since the app uses Secret API Keys through Spotify's API, it's unable to be pulled down and run locally unless I give you the API keys. 
 
-The project can be viewed [Here](https://ravify.vercel.app/ "Here)
+The project can be viewed at this link! https://ravify.vercel.app/
 
 A Spotify is REQUIRED to run this application, if you would like to see the app's functionality without one you can use the cypress tests.
 
