@@ -8,7 +8,7 @@ Unfortunately, since the app uses Secret API Keys through Spotify's API, it's un
 The project can be viewed at this link! https://ravify.vercel.app/
 I have submitted the project to become public through the Spotify API, currently you can only log in using 2 accounts, (Mine and a friends for testing). If you would like to see the site in action you can use the cypress tests as mentioned below or you can ask me to show you. Sadly this Extension Requests process can take up to 6 weeks so hopefully I can get it done a little quicker!
 
-A Spotify is REQUIRED to run this application, if you would like to see the app's functionality without one you can use the cypress tests.
+A Spotify Account with a history of music listening is REQUIRED to run this application, if you would like to see the app's functionality without one you can use the cypress tests.
 
 <details>
 <summary> <h2>Preview</h2> </summary>
