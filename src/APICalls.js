@@ -35,7 +35,7 @@ async function handleRedirect() {
     const url = window.location.search
     const urlParams = new URLSearchParams(url)
     const code = urlParams.get('code')
-    window.history.pushState("", "", "http://localhost:3000/")
+    window.history.pushState("", "", "https://ravify.vercel.app/")
 
     const params = new URLSearchParams();
     params.append("client_id", REACT_APP_CLIENT_KEY);
