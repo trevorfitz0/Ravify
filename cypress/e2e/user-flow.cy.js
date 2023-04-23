@@ -1,10 +1,12 @@
 describe('User redirect flow', () => {
 
-  it('should be able to visit site', () => {
+  beforeEach(() => {
     cy.visit('http://localhost:3000/')
   })
+
   it('should be able to log Into Spotify', () => {
-    cy.visit('http://localhost:3000/')
+
+    sessionStorage.setItem('user-login-testing', true)
  
     cy.get('.main-button').click()
 
@@ -17,9 +19,17 @@ describe('User redirect flow', () => {
       cy.url().should('include', 'response_type=code')
     })
   })
-  it('should be able to choose a background', () => {
-    cy.visit('http://localhost:3000/')
 
+  it('should be able to log out', () => {
     
+    sessionStorage.setItem('loggedIn', true)
+    cy.get('#get-started').click()
+    cy.get('.logout-button').click()
+
+    cy.url().should('include', '/#/')
+    cy.window()
+      .its("sessionStorage")
+      .invoke("getItem", "artist-data")
+      .should("not.exist")
   })
 })

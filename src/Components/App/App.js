@@ -4,6 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import './App.css'
 import PickBackground from '../PickBackground/PickBackground.js';
 import Result from '../Result/Result.js';
+import Header from '../Header/Header.js';
 
 export default class App extends Component {
   
@@ -34,8 +35,10 @@ export default class App extends Component {
   }
 
   cypressCheck() {
-    console.log('cypress')
-    if (window.Cypress) {
+
+    const check = sessionStorage.getItem('user-login-testing')
+
+    if (window.Cypress && check === null) {
       this.setState({ loggedIn: true })
       this.setState({ artistList: JSON.parse(sessionStorage.getItem('artist-data')) })
     }
@@ -97,6 +100,7 @@ export default class App extends Component {
           <Route exact path='/home' render={() => {
           return (
             <div>
+              <Header/>
               <Result background={ this.state.background } artistList={ this.state.artistList} loading={ this.state.loading } logOut={ this.logOut } />
             </div>
           )
