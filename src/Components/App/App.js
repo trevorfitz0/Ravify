@@ -46,7 +46,9 @@ export default class App extends Component {
   async componentDidMount() {
     this.cypressCheck()
     this.accessToken()
-    if (window.location.search.length > 0) {
+    const url = window.location.search
+    const urlParams = new URLSearchParams(url)
+    if (urlParams.get('code')) {
       const data = await handleRedirect()
       if(data !== 'no data') {
         this.setState({ artistList: data.items, loggedIn: true})
