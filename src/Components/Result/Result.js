@@ -19,7 +19,6 @@ function Result({ background, artistList, loading, logOut}) {
       }[background];
 
       var acc = 0
-      console.log(artistList)
 
       if ( loading ) {
         return null
@@ -43,7 +42,7 @@ function Result({ background, artistList, loading, logOut}) {
                     artistList.map(item => {
                         acc++
                         if (acc > 3) {
-                            return <h3>{item.name}</h3>
+                            return <h3 key={item.name}>{item.name}</h3>
                         }
                     })
                 }
