@@ -2,7 +2,7 @@ import { Buffer } from "buffer"
 
 const  { REACT_APP_CLIENT_KEY, REACT_APP_CLIENT_SECRET_KEY } = process.env
 
-const redirectUrl = 'https://ravify.vercel.app/callback'
+const redirectUrl = 'http://localhost:3000/callback'
 const topArtistsFetch = `https://api.spotify.com/v1/me/top/artists?limit=25&offset=0&time_range=long_term`
 
 function getAccessToken() {
@@ -26,7 +26,7 @@ function getArtistInfo(accessToken, id) {
 
 function logUserIn() {
 
-    var params = `?client_id=${REACT_APP_CLIENT_KEY}&response_type=code&redirect_uri=${ encodeURI(redirectUrl)}&show_dialog=true&&scope=user-read-private user-top-read`
+    var params = `?client_id=${REACT_APP_CLIENT_KEY}&response_type=code&redirect_uri=${ encodeURI(redirectUrl) }&show_dialog=true&&scope=user-read-private user-top-read`
 
     window.location.href = 'https://accounts.spotify.com/authorize' + params
 }
@@ -35,7 +35,7 @@ async function handleRedirect() {
     const url = window.location.search
     const urlParams = new URLSearchParams(url)
     const code = urlParams.get('code')
-    window.history.pushState("", "", "https://ravify.vercel.app/")
+    window.history.pushState("", "", "http://localhost:3000/")
 
     const params = new URLSearchParams();
     params.append("client_id", REACT_APP_CLIENT_KEY);
@@ -51,9 +51,8 @@ async function handleRedirect() {
             },
             body: params
         })
-        
-        const { access_token } = await userData.json()
 
+        const { access_token } = await userData.json()
 
 
     const topArtists = await fetch(topArtistsFetch, {
