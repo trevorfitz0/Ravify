@@ -4,6 +4,7 @@ describe('Main Page', () => {
 
     //Another note, I cannot use cy.intercept in this project because to sent any get request you need a user token which is only valid for an hour and to recieve that I would have to have a user log in. Besides that a post request would not work either here because there is no return from it.
 
+
     it('should be able to select a background', () => {
         cy.visit('http://localhost:3000')
 
@@ -22,6 +23,8 @@ describe('Main Page', () => {
     })
 
     it('should display Artist data', () => {
+
+        cy.viewport('iphone-xr')
     
         cy.visit('http://localhost:3000')
 
@@ -42,4 +45,4 @@ describe('Main Page', () => {
         cy.get('.all-artists > :nth-child(1)').contains('CloZee')
 
     })
-})
+    })

@@ -45,23 +45,22 @@
 /* Poster Creation */
 
 .final-poster {
-    height: 550px;
+    height: 400px;
     box-shadow: 0px 11px 82px 0 rgba(0, 0, 0, 1);
 }
 
 .artists {  
-    margin-top: 50px;
+    margin-top: 10px;
     height: 150px;
     max-width: 600px;
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
 }
   
 .headliner { 
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .direct-support {
@@ -74,7 +73,7 @@
 
 .all-artists {
     font-size: 20px;
-    margin-top: 230px;
+    margin-top: 160px;
     position: absolute;
     display: flex;
     max-width: 500px;
