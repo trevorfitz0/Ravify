@@ -75,7 +75,7 @@ export default class App extends Component {
           <Route exact path='/' render={() => {
           return (
             <div className='login-screen'>
-              <h1 className='main-title'>Welcome to Ravify!</h1>
+              <h1 className='title'>Ravify!</h1>
               {this.state.loggedIn 
               ?
                 <Link to='/background' className='main-button' id='get-started'>Get Started!</Link> 
