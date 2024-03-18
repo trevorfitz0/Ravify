@@ -12,26 +12,30 @@ import { toPng } from 'html-to-image';
 function Result({ background, artistList, loading, logOut }) {
 
     function downloadImage() {
-        // Select the poster element
-        const poster = document.querySelector('.poster');
-
-        // Convert the poster to PNG image
-        toPng(poster)
-            .then(function (dataUrl) {
-                // Create a temporary link element
-                const link = document.createElement('a');
-                link.href = dataUrl;
-                link.download = 'poster.png';
-
-                // Trigger a click event on the link to start the download
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            })
-            .catch(function (error) {
-                console.error('Error generating PNG image:', error);
-            });
+        // Request animation frame to ensure the screenshot is taken after the page has rendered
+        requestAnimationFrame(() => {
+            // Select the poster element
+            const poster = document.querySelector('.poster');
+    
+            // Convert the poster to PNG image
+            toPng(poster)
+                .then(function (dataUrl) {
+                    // Create a temporary link element
+                    const link = document.createElement('a');
+                    link.href = dataUrl;
+                    link.download = 'poster.png';
+    
+                    // Trigger a click event on the link to start the download
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                })
+                .catch(function (error) {
+                    console.error('Error generating PNG image:', error);
+                });
+        });
     }
+    
 
     const backgroundImage = {
         beach,

@@ -49,7 +49,7 @@
 img {
     height: 50vh;
     transition: .2s;
-    box-shadow: 0px 11px 82px -50px rgba(255,255,255,0.75);
+    /* box-shadow: 0px 11px 82px -50px rgba(255,255,255,0.75); */
 }
 
 .images > img:hover {
