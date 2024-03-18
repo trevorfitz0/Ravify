@@ -15,24 +15,23 @@ function Result({ background, artistList, loading, logOut }) {
         // Select the poster element
         const poster = document.querySelector('.poster');
     
-        // Convert the poster to PNG image after a short delay
-        setTimeout(() => {
-            toPng(poster)
-                .then(function (dataUrl) {
-                    // Create a temporary link element
-                    const link = document.createElement('a');
-                    link.href = dataUrl;
-                    link.download = 'poster.png';
-    
-                    // Trigger a click event on the link to start the download
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                })
-                .catch(function (error) {
-                    console.error('Error generating PNG image:', error);
-                });
-        }, 500); // Adjust the delay time as needed
+        // Convert the poster to PNG image
+        toPng(poster)
+            .then(function (dataUrl) {
+                // Open a new tab with the screenshot
+                const newTab = window.open();
+                if (newTab) {
+                    // Set the HTML content of the new tab
+                    newTab.document.body.innerHTML = `<img src="${dataUrl}" style="max-width: 100%;" />`;
+                    // Focus on the new tab
+                    newTab.focus();
+                } else {
+                    console.error('Failed to open new tab.');
+                }
+            })
+            .catch(function (error) {
+                console.error('Error generating PNG image:', error);
+            });
     }
     
 
