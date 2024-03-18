@@ -11,12 +11,17 @@
   color: var(--text-color);
 }
 
+@font-face {
+  font-family: 'CustomFont';
+  src: url('BebasNeue-Regular.ttf') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: 'Bebas Neue', cursive;
+  font-family: 'CustomFont', sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: 'CustomFont';
+    src: url('BebasNeue-Regular.ttf') format('truetype');
 }

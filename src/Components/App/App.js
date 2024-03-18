@@ -4,7 +4,6 @@ import { Link, Route } from 'react-router-dom';
 import './App.css'
 import PickBackground from '../PickBackground/PickBackground.js';
 import Result from '../Result/Result.js';
-import Header from '../Header/Header.js';
 
 export default class App extends Component {
   
