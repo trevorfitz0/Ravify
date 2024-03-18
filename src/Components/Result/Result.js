@@ -13,7 +13,7 @@ function Result({ background, artistList, loading, logOut }) {
 
     function downloadImage() {
         // Select the poster element
-        const poster = document.querySelector('.ss');
+        const poster = document.querySelector('.poster');
 
         // Convert the poster to PNG image
         toPng(poster)
@@ -50,26 +50,24 @@ function Result({ background, artistList, loading, logOut }) {
             <div>
                 <div className='home-background'>
                     <Header logOut={logOut} />
-                    <div className='ss'>
                     <div className='poster'>
-                            <img className='final-poster' alt='final poster' src={backgroundImage}></img>
-                            <div className='artists'>
-                                <h1 className='headliner'>{artistList[0].name}</h1>
-                                <br />
-                                <div className='direct-support'>
-                                    <h2 className={`direct-1`}>{artistList[1].name}</h2>
-                                    <h2 className={`direct-2`}>{artistList[2].name}</h2>
-                                </div>
+                        <img className='final-poster' alt='final poster' src={backgroundImage}></img>
+                        <div className='artists'>
+                            <h1 className='headliner'>{artistList[0].name}</h1>
+                            <br />
+                            <div className='direct-support'>
+                                <h2 className={`direct-1`}>{artistList[1].name}</h2>
+                                <h2 className={`direct-2`}>{artistList[2].name}</h2>
                             </div>
-                            <div className='all-artists'>
-                                {artistList.map(item => {
-                                    acc++;
-                                    if (acc > 3) {
-                                        return <h3 key={item.name}>{item.name}</h3>;
-                                    }
-                                })}
-                                <i className="fa-brands fa-spotify fa-xl" id='spotify-logo' size="2xl" style={{ color: "#ffffff" }}></i>
-                            </div>
+                        </div>
+                        <div className='all-artists'>
+                            {artistList.map(item => {
+                                acc++;
+                                if (acc > 3) {
+                                    return <h3 key={item.name}>{item.name}</h3>;
+                                }
+                            })}
+                            <i className="fa-brands fa-spotify fa-xl" id='spotify-logo' size="2xl" style={{ color: "#ffffff" }}></i>
                         </div>
                     </div>
                     <Link to='/background' className='change-background-button'>Change Background</Link>
