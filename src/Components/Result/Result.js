@@ -10,30 +10,31 @@ import Header from '../Header/Header';
 import { toPng } from 'html-to-image';
 
 function Result({ background, artistList, loading, logOut }) {
+    const [showModal, setShowModal] = useState(false);
+    const [modalImageUrl, setModalImageUrl] = useState('');
+
+    function openModal(url) {
+        setShowModal(true);
+        setModalImageUrl(url);
+    }
+
+    function closeModal() {
+        setShowModal(false);
+    }
 
     function downloadImage() {
         // Select the poster element
         const poster = document.querySelector('.poster');
-    
+
         // Convert the poster to PNG image
         toPng(poster)
             .then(function (dataUrl) {
-                // Open a new tab with the screenshot
-                const newTab = window.open();
-                if (newTab) {
-                    // Set the HTML content of the new tab
-                    newTab.document.body.innerHTML = `<img src="${dataUrl}" style="max-width: 100%;" />`;
-                    // Focus on the new tab
-                    newTab.focus();
-                } else {
-                    console.error('Failed to open new tab.');
-                }
+                openModal(dataUrl);
             })
             .catch(function (error) {
                 console.error('Error generating PNG image:', error);
             });
     }
-    
 
     const backgroundImage = {
         beach,
@@ -53,9 +54,9 @@ function Result({ background, artistList, loading, logOut }) {
                 <div className='home-background'>
                     <Header logOut={logOut} />
                     <div className='poster'>
-                        <img className='final-poster' alt='final poster' src={backgroundImage}></img>
-                        <h1 className='festival-name'>Ravify.me</h1>
+                        <h1 className='festival-name'>ravify.me</h1>
                         <p className='linebreak'></p>
+                        <img className='final-poster' alt='final poster' src={backgroundImage}></img>
                         <div className='artists'>
                             <h1 className='headliner'>{artistList[0].name}</h1>
                             <br />
@@ -76,11 +77,19 @@ function Result({ background, artistList, loading, logOut }) {
                     </div>
                     <Link to='/background' className='change-background-button'>Change Background</Link>
                     <div className='share-section'>
-                        <div className='download-button'>
-                            <p onClick={downloadImage}>Download Image</p>
+                        <div className='html2can'>
+                            <button onClick={downloadImage}>Download Image</button>
                         </div>
                     </div>
                 </div>
+                {showModal && (
+                    <div className="modal-overlay" onClick={closeModal}>
+                        <div className="modal-content">
+                            <img src={modalImageUrl} alt="Screenshot" style={{ maxWidth: '100%' }} />
+                            <button onClick={closeModal}>Close</button>
+                        </div>
+                    </div>
+                )}
             </div>
         );
     }
