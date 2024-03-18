@@ -12,8 +12,7 @@ import { toPng } from 'html-to-image';
 function Result({ background, artistList, loading, logOut }) {
 
     function downloadImage() {
-        // Request animation frame to ensure the screenshot is taken after the page has rendered
-        requestAnimationFrame(() => {
+        window.addEventListener('load', () => {
             // Select the poster element
             const poster = document.querySelector('.poster');
     
