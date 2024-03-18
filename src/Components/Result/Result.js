@@ -12,11 +12,11 @@ import { toPng } from 'html-to-image';
 function Result({ background, artistList, loading, logOut }) {
 
     function downloadImage() {
-        window.addEventListener('load', () => {
-            // Select the poster element
-            const poster = document.querySelector('.poster');
+        // Select the poster element
+        const poster = document.querySelector('.poster');
     
-            // Convert the poster to PNG image
+        // Convert the poster to PNG image after a short delay
+        setTimeout(() => {
             toPng(poster)
                 .then(function (dataUrl) {
                     // Create a temporary link element
@@ -32,7 +32,7 @@ function Result({ background, artistList, loading, logOut }) {
                 .catch(function (error) {
                     console.error('Error generating PNG image:', error);
                 });
-        });
+        }, 500); // Adjust the delay time as needed
     }
     
 
