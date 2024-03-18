@@ -25,15 +25,18 @@ function Result({ background, artistList, loading, logOut }) {
     function downloadImage() {
         // Select the poster element
         const poster = document.querySelector('.poster');
-
-        // Convert the poster to PNG image
-        toPng(poster)
-            .then(function (dataUrl) {
-                openModal(dataUrl);
-            })
-            .catch(function (error) {
-                console.error('Error generating PNG image:', error);
-            });
+    
+        // Wait for the image to render completely
+        setTimeout(() => {
+            // Convert the poster to PNG image
+            toPng(poster)
+                .then(function (dataUrl) {
+                    openModal(dataUrl);
+                })
+                .catch(function (error) {
+                    console.error('Error generating PNG image:', error);
+                });
+        }, 1000); // Adjust the delay time as needed
     }
 
     const backgroundImage = {
