@@ -52,6 +52,8 @@ function Result({ background, artistList, loading, logOut }) {
           <Header logOut={logOut} />
           <div className='poster'>
             <img className='final-poster' alt='final poster' src={backgroundImage}></img>
+            <h1 className='festival-name'>Ravify.me</h1>
+            <p className="linebreak"></p>
             <div className='artists'>
               <h1 className='headliner'>{artistList[0].name}</h1>
               <br />
@@ -74,7 +76,7 @@ function Result({ background, artistList, loading, logOut }) {
           <Link to='/background' className='change-background-button'>Change Background</Link>
           <div className='share-section'>
             <div className='html2can'>
-              <h4 onClick={() => captureAndDownload()}>Hello world!</h4>
+              <h4 onClick={() => captureAndDownload()}>Download image!</h4>
             </div>
           </div>
         </div>

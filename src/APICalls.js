@@ -2,7 +2,7 @@ import { Buffer } from "buffer"
 
 const  { REACT_APP_CLIENT_KEY, REACT_APP_CLIENT_SECRET_KEY } = process.env
 
-const redirectUrl = 'http://localhost:3000/callback'
+const redirectUrl = 'http://ravify.me/callback'
 const topArtistsFetch = `https://api.spotify.com/v1/me/top/artists?limit=25&offset=0&time_range=long_term`
 
 function getAccessToken() {
@@ -35,7 +35,7 @@ async function handleRedirect() {
     const url = window.location.search
     const urlParams = new URLSearchParams(url)
     const code = urlParams.get('code')
-    window.history.pushState("", "", "http://localhost:3000/#/")
+    window.history.pushState("", "", "http://ravify.me/#/")
 
     const params = new URLSearchParams();
     params.append("client_id", REACT_APP_CLIENT_KEY);

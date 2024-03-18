@@ -28,7 +28,7 @@
     height: 8vh;
     min-height: 50px;
     width: 12vw;
-    min-width: 100px;
+    min-width: 200px;
     background-color: var(--spotify-green);
     display: flex;
     justify-content: center;
@@ -50,8 +50,24 @@
     box-shadow: 0px 11px 82px 0 rgba(0, 0, 0, 1);
 }
 
+.festival-name {
+    margin-top: 23px;
+    position: absolute;
+    display: flex;
+}
+
+.linebreak {
+    margin-top: 75px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    border-bottom: 1px solid white;
+}
+
 .artists {  
-    margin-top: 60px;
+    margin-top: 90px;
     height: 150px;
     max-width: 600px;
     position: absolute;
@@ -65,7 +81,7 @@
 }
 
 .direct-support {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-around;
     gap: 1rem;
@@ -74,7 +90,7 @@
 
 .all-artists {
     font-size: 16px;
-    margin-top: 220px;
+    margin-top: 230px;
     position: absolute;
     display: flex;
     flex-direction: row;
@@ -96,7 +112,8 @@ i {
 
 .html2can {
     padding: 10px; 
-    background: black;
+    background: #2C302E;
     cursor: pointer;
+    border-radius: 10px;
 }
 
