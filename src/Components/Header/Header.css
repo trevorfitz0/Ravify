@@ -25,12 +25,12 @@
     min-height: 50px;
     width: 120px;
     min-width: 10vw;
-    background-color: var(--spotify-green);
+    background-color: #2b2d42;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 1vw;
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
 }

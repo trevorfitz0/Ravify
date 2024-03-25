@@ -9,7 +9,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-image: url(../../Images/background.png);
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); 
     background-size: cover;
     height: 100vh;
 }
@@ -26,8 +27,8 @@
     min-height: 60px;
     width: 40vw;
     min-width: 300px;
-    background-color: var(--spotify-green);
-    border-radius: 40px;
+    background-color: #2b2d42;
+    border-radius: 20px;
     transition-duration: .2s;
     display: flex;
     align-items: center;
@@ -48,15 +49,8 @@
     }
   }
 
-a {
-    text-decoration: none;
-    font-size: 3.5rem;
-}
 
 i {
     margin-left: 1vw;
-}
-
-#get-started {
-    font-size: 3.5rem;
+    margin-bottom: 1rem;
 }

@@ -4,9 +4,9 @@ import { Link, Route } from 'react-router-dom';
 import './App.css'
 import PickBackground from '../PickBackground/PickBackground.js';
 import Result from '../Result/Result.js';
+import { Redirect } from 'react-router-dom/cjs/react-router-dom.min.js';
 
 export default class App extends Component {
-  
   constructor() {
     super()
     this.setBackground = this.setBackground.bind(this)
@@ -77,7 +77,7 @@ export default class App extends Component {
               <h1 className='title'>Ravify!</h1>
               {this.state.loggedIn 
               ?
-                <Link to='/background' className='main-button' id='get-started'>Get Started!</Link> 
+                <Redirect to="/background" />
               : 
               <div className='main-button' onClick={() => logUserIn()}>
                 <h1>Log In With Spotify </h1>

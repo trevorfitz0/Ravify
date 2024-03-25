@@ -10,35 +10,6 @@ import Header from '../Header/Header';
 import { toPng } from 'html-to-image';
 
 function Result({ background, artistList, loading, logOut }) {
-    const [showModal, setShowModal] = useState(false);
-    const [modalImageUrl, setModalImageUrl] = useState('');
-
-    function openModal(url) {
-        setShowModal(true);
-        setModalImageUrl(url);
-    }
-
-    function closeModal() {
-        setShowModal(false);
-    }
-
-    function downloadImage() {
-        // Select the poster element
-        const poster = document.querySelector('.poster');
-    
-        // Wait for the image to render completely
-        setTimeout(() => {
-            // Convert the poster to PNG image
-            toPng(poster)
-                .then(function (dataUrl) {
-                    openModal(dataUrl);
-                })
-                .catch(function (error) {
-                    console.error('Error generating PNG image:', error);
-                });
-        }, 1000); // Adjust the delay time as needed
-    }
-
     const backgroundImage = {
         beach,
         mountain,
@@ -47,17 +18,33 @@ function Result({ background, artistList, loading, logOut }) {
         nightForest
     }[background];
 
-    var acc = 0;
+    const handleDownloadImage = () => {
+        const poster = document.getElementById('poster-container');
+
+        toPng(poster)
+            .then((dataUrl) => {
+                // Create a link element to download the image
+                const downloadLink = document.createElement('a');
+                downloadLink.href = dataUrl;
+                downloadLink.download = 'festival_lineup.png';
+
+                // Simulate click to trigger download
+                downloadLink.click();
+            })
+            .catch((error) => {
+                console.error('Error generating image:', error);
+            });
+    };
 
     if (loading) {
         return null;
     } else {
         return (
-            <div>
+            <div className='background2'>
                 <div className='home-background'>
                     <Header logOut={logOut} />
-                    <div className='poster'>
-                        <h1 className='festival-name'>ravify.me</h1>
+                    <div className='poster' id='poster-container'>
+                        <h1 className='festival-name'>Powered by ravify.me</h1>
                         <p className='linebreak'></p>
                         <img className='final-poster' alt='final poster' src={backgroundImage}></img>
                         <div className='artists'>
@@ -70,10 +57,7 @@ function Result({ background, artistList, loading, logOut }) {
                         </div>
                         <div className='all-artists'>
                             {artistList.map(item => {
-                                acc++;
-                                if (acc > 3) {
-                                    return <h3 key={item.name}>{item.name}</h3>;
-                                }
+                                return <h3 key={item.name}>{item.name}</h3>;
                             })}
                             <i className="fa-brands fa-spotify fa-xl" id='spotify-logo' size="2xl" style={{ color: "#ffffff" }}></i>
                         </div>
@@ -81,18 +65,10 @@ function Result({ background, artistList, loading, logOut }) {
                     <Link to='/background' className='change-background-button'>Change Background</Link>
                     <div className='share-section'>
                         <div className='html2can'>
-                            <button onClick={downloadImage}>Download Image</button>
+                            <div className='download-button' onClick={handleDownloadImage}>Download Image</div>
                         </div>
                     </div>
                 </div>
-                {showModal && (
-                    <div className="modal-overlay" onClick={closeModal}>
-                        <div className="modal-content">
-                            <img src={modalImageUrl} alt="Screenshot" style={{ maxWidth: '100%' }} />
-                            <button onClick={closeModal}>Close</button>
-                        </div>
-                    </div>
-                )}
             </div>
         );
     }
