@@ -10,18 +10,23 @@
     position: relative;
     display: flex;
     justify-content: space-around;
-    scale: .75;
+    scale: 1;
+}
+
+.barrier {
+    width: 100vw;
+    height: 10vh;
 }
 
 .change-background-button {
     position: absolute;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 1.3rem;
     height: 5vh;
     min-height: 50px;
     width: 8vw;
     min-width: 170px;
-    background-color: var(--spotify-green);
+    background-color: #2b2d42;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,14 +37,15 @@
 }
 
 .download-button {
+    cursor: pointer;
     position: absolute;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 1.3rem;
     height: 5vh;
     min-height: 50px;
     width: 8vw;
     min-width: 170px;
-    background-color: var(--spotify-green);
+    background-color: #2b2d42;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,6 +57,10 @@
 }
 
 .change-background-button:hover {
+    scale: 1.02;
+}
+
+.download-button:hover {
     scale: 1.02;
 }
 
@@ -96,7 +106,6 @@
     justify-content: space-around;
     gap: 1rem;
     font-size: 1.3rem;
-    margin-top: 10px;
 }
 
 .all-artists {
@@ -121,32 +130,46 @@ i {
     justify-content: space-around;
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
+.modal-content button {
+    margin-top: 20px;
+}
+
+.modal {
+    display: block; /* Make the modal visible */
+    position: fixed; /* Position the modal */
+    z-index: 1000; /* Ensure it appears on top of other elements */
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
 .modal-content {
-    max-width: 100%;
-    max-height: 100%;
-    overflow: auto;
-    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
 }
 
-.modal-content img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    display: block;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+    font-size: 20px;
 }
 
-.modal-content button {
-    margin-top: 20px;
+.modal-image {
+    max-width: 100%; /* Limit the width to 100% of the modal width */
+    max-height: 100%; /* Limit the height to 100% of the modal height */
+    display: block; /* Ensure the image is displayed properly */
+    margin: 0 auto; /* Center the image horizontally */
+    width: auto; /* Allow the width to adjust based on aspect ratio */
+    height: auto; /* Allow the height to adjust based on aspect ratio */
 }

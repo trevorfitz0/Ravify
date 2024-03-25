@@ -10,6 +10,9 @@ import Header from '../Header/Header';
 import { toPng } from 'html-to-image';
 
 function Result({ background, artistList, loading, logOut }) {
+    const [showModal, setShowModal] = useState(false);
+    const [modalImage, setModalImage] = useState(null);
+
     const backgroundImage = {
         beach,
         mountain,
@@ -21,19 +24,21 @@ function Result({ background, artistList, loading, logOut }) {
     const handleDownloadImage = () => {
         const poster = document.getElementById('poster-container');
 
-        toPng(poster)
-            .then((dataUrl) => {
-                // Create a link element to download the image
-                const downloadLink = document.createElement('a');
-                downloadLink.href = dataUrl;
-                downloadLink.download = 'festival_lineup.png';
+        setTimeout(() => {
+            toPng(poster)
+                .then((dataUrl) => {
+                    setModalImage(dataUrl);
+                    setShowModal(true);
+                })
+                .catch((error) => {
+                    console.error('Error generating image:', error);
+                });
+        }, 1000); // Adjust timeout as needed
+    };
 
-                // Simulate click to trigger download
-                downloadLink.click();
-            })
-            .catch((error) => {
-                console.error('Error generating image:', error);
-            });
+    const closeModal = () => {
+        setShowModal(false);
+        setModalImage(null);
     };
 
     if (loading) {
@@ -43,6 +48,7 @@ function Result({ background, artistList, loading, logOut }) {
             <div className='background2'>
                 <div className='home-background'>
                     <Header logOut={logOut} />
+                    <div className='barrier'></div>
                     <div className='poster' id='poster-container'>
                         <h1 className='festival-name'>Powered by ravify.me</h1>
                         <p className='linebreak'></p>
@@ -69,6 +75,14 @@ function Result({ background, artistList, loading, logOut }) {
                         </div>
                     </div>
                 </div>
+                {showModal && (
+                    <div className='modal'>
+                        <div className='modal-content'>
+                            <span className='close' onClick={closeModal}>&times;</span>
+                            <img className='modal-image' src={modalImage} alt='modal'></img>
+                        </div>
+                    </div>
+                )}
             </div>
         );
     }
