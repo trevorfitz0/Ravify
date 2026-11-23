@@ -5,5 +5,8 @@
   "description": "Festival lineup posters with moving backgrounds, sized for Instagram and Snapchat stories.",
   "scripts": {
     "dev": "npx --yes serve public -l 3000"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
