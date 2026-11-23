@@ -1,24 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/favicon.png" />
-    <script src="https://kit.fontawesome.com/6a953a6b9a.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Ravify</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="/css/site.css">
+<title>ravify — your lineup, story-ready</title>
+<meta name="description" content="Turn your favourite artists into a festival lineup poster with a moving background, then share it to your Instagram or Snapchat story.">
+<meta property="og:title" content="ravify — your lineup, story-ready">
+<meta property="og:description" content="Make a festival lineup poster with a moving background and share it to your story.">
+<meta name="theme-color" content="#1A1013">
+</head>
+<body>
+<div class="wrap">
+<header class="site-head">
+  <a class="logo" href="/">ravify<span class="dot">.</span></a>
+  <nav aria-label="Main">
+    <a href="#make">Make one</a>
+    <a href="#how">How it works</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="kicker">Lineup posters for your story</p>
+    <h1>Your lineup,<br>story-ready.</h1>
+    <p class="lede">Type the artists you'd book, pick a moving background, and send it straight to your Instagram or Snapchat story. Or just save it.</p>
+  </section>
+
+  <section class="builder" id="make">
+    <div class="controls">
+      <div class="card plum">
+        <div class="card-head"><h2>The lineup</h2><span class="count mono" id="count"></span></div>
+        <div class="field">
+          <label for="title">Festival name</label>
+          <input class="input" id="title" maxlength="40" autocomplete="off" placeholder="Midnight Bloom">
+        </div>
+        <div class="field">
+          <label for="sub">Line underneath <span class="hint">dates, a place, anything</span></label>
+          <input class="input" id="sub" maxlength="60" autocomplete="off" placeholder="Summer 2027 · Main Stage">
+        </div>
+        <div class="field">
+          <label for="artists">Artists <span class="hint">one per line, headliner first, up to 30</span></label>
+          <textarea class="input" id="artists" rows="9" spellcheck="false" placeholder="Your headliner&#10;Second on the bill&#10;Everyone else…"></textarea>
+        </div>
+        <div class="btn-row">
+          <button class="btn small ghost" id="shuffle" type="button">Shuffle order</button>
+          <button class="btn small ghost" id="clear" type="button">Start empty</button>
+          <button class="btn small ghost" id="spotify" type="button" hidden>Import from Spotify</button>
+          <button class="btn small ghost" id="lastfm" type="button" hidden>Import from Last.fm</button>
+        </div>
+        <form class="inline-form" id="lastfm-form" hidden>
+          <label class="sr" for="lastfm-user">Last.fm username</label>
+          <input class="input" id="lastfm-user" placeholder="Last.fm username" autocomplete="off">
+          <button class="btn small" type="submit">Import</button>
+        </form>
+        <p class="notice err" id="import-error" role="alert" hidden></p>
+      </div>
+
+      <div class="card slate">
+        <div class="card-head"><h2>The look</h2></div>
+        <div class="field">
+          <span class="label" id="bg-label">Moving background</span>
+          <div class="thumbs" id="bgs" role="radiogroup" aria-labelledby="bg-label"></div>
+          <input type="file" id="photo" accept="image/*" hidden>
+        </div>
+        <div class="field">
+          <span class="label" id="pal-label">Colours</span>
+          <div class="swatches" id="pals" role="radiogroup" aria-labelledby="pal-label"></div>
+        </div>
+        <div class="field">
+          <span class="label" id="font-label">Lettering</span>
+          <div class="seg" id="fonts" role="radiogroup" aria-labelledby="font-label"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage">
+      <div class="phone">
+        <canvas id="preview" width="720" height="1280" role="img" aria-label="Preview of your lineup poster"></canvas>
+        <button class="pause" id="pause" type="button" aria-label="Pause the animation"></button>
+      </div>
+      <div class="actions">
+        <button class="btn" id="save-image" type="button">Save image</button>
+        <button class="btn alt" id="save-video" type="button">Save video</button>
+      </div>
+      <p class="note">Both open a preview with <strong>Share to story</strong> and <strong>Download</strong>.</p>
+      <button class="textbtn" id="copy" type="button">Copy a link to this lineup</button>
+    </div>
+  </section>
+
+  <section class="steps" id="how">
+    <div class="step"><span class="n">01</span><h3>Book your dream bill</h3><p>Type or paste your artists. The first name headlines; the rest fall into rows underneath.</p></div>
+    <div class="step"><span class="n">02</span><h3>Pick the mood</h3><p>Seven backgrounds that move, six colour sets, three lettering styles. Or put your own photo behind it.</p></div>
+    <div class="step"><span class="n">03</span><h3>Post it</h3><p>Save a still image or an eight-second loop sized for stories, then share it to Instagram or Snapchat from your phone.</p></div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <span>ravify — lineups worth posting</span>
+  <span>Not affiliated with Instagram, Snapchat or Spotify.</span>
+</footer>
+</div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-head">
+    <h2 id="sheet-title">Making your poster</h2>
+    <button class="x" id="sheet-close" type="button" aria-label="Close">&times;</button>
+  </div>
+  <div class="sheet-body">
+    <div class="progress" id="progress"><div class="bar" id="bar"></div></div>
+    <p class="note" id="sheet-status" role="status"></p>
+    <div class="result" id="result"></div>
+    <div class="btn-row" id="sheet-actions" hidden>
+      <button class="btn" id="share" type="button" hidden>Share to story</button>
+      <button class="btn ghost" id="download" type="button">Download</button>
+    </div>
+    <p class="note" id="sheet-hint"></p>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="/js/config.js"></script>
+<script src="/js/backgrounds.js"></script>
+<script src="/js/poster.js"></script>
+<script src="/js/export.js"></script>
+<script src="/js/import.js"></script>
+<script src="/js/app.js"></script>
+</body>
 </html>

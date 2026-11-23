@@ -1,43 +1,45 @@
-<h1 align=center>Ravify</h1>
+# ravify
 
-## Abstract
-Ravify is a react Application which is centralized around the spotify for devs API. The main goal of this Application is to first log a user in using their spotify account then grab their top artist data from all time. Once the Artist data is retrived the application lets the user choose between 1 of 3 backdrops for their lineup then places their favortie artists in a festival lineup style on top of the backdrop.
-## Project Viewing
-Unfortunately, since the app uses Secret API Keys through Spotify's API, it's unable to be pulled down and run locally unless I give you the API keys. 
+Make a festival lineup poster with a moving background and share it to your Instagram or Snapchat story.
 
-The project can be viewed at this link! https://ravify.vercel.app/
-I have submitted the project to become public through the Spotify API, currently you can only log in using 2 accounts, (Mine and a friends for testing). If you would like to see the site in action you can use the cypress tests as mentioned below or you can ask me to show you. Sadly this Extension Requests process can take up to 6 weeks so hopefully I can get it done a little quicker!
+- Type or paste up to 30 artists; the first one headlines.
+- Seven animated backgrounds, six colour sets, three lettering styles, or your own photo.
+- **Save image** gives a 1080 × 1920 PNG. **Save video** records an eight-second seamless loop (MP4 in Chrome and Safari).
+- On a phone, **Share to story** opens the share sheet so the file goes straight to Instagram or Snapchat.
+- **Copy a link** puts the whole lineup in the URL, so anyone opening it sees the poster and can make their own.
 
-A Spotify Account with a history of music listening is REQUIRED to run this application, if you would like to see the app's functionality without one you can use the cypress tests.
+## Run it
 
-<details>
-<summary> <h2>Preview</h2> </summary>
-<br>
+It is a plain static site: no build step and no server.
 
-Home Page
-<img width="1423" alt="Screenshot 2023-04-21 at 12 58 41 AM" src="https://user-images.githubusercontent.com/57536985/233563653-160557e7-1603-49b5-8b6a-1111520aee5c.png">
+```
+npm run dev      # serves ./public on http://localhost:3000
+```
 
+Deploys anywhere that serves a folder. `vercel.json` points Vercel at `public/`.
 
-Backdrop Selection
-<img width="1423" alt="Screenshot 2023-04-21 at 12 59 25 AM" src="https://user-images.githubusercontent.com/57536985/233563776-bb7d4a43-d7d1-4a36-b193-e0f3e1ee3bf6.png">
+## Layout
 
+| File | What it does |
+| --- | --- |
+| `public/index.html`, `public/css/site.css` | The page and its look |
+| `public/js/backgrounds.js` | The animated backgrounds and colour sets |
+| `public/js/poster.js` | Lays out the lettering on the poster |
+| `public/js/export.js` | PNG and video export, sharing, download |
+| `public/js/app.js` | The form, live preview and buttons |
+| `public/js/import.js`, `public/callback/` | Optional Spotify and Last.fm imports |
+| `public/js/config.js` | Watermark text and the optional import keys |
 
-Lineup display page
-<img width="1422" alt="Screenshot 2023-04-21 at 1 00 01 AM" src="https://user-images.githubusercontent.com/57536985/233563883-a08cfe13-5c14-4e75-bf65-277cf22cfb62.png">
+## Optional imports
 
+Both are hidden until a key is set in `public/js/config.js`.
 
-</details>
+- **Last.fm**: add a free API key. Works for any public Last.fm username.
+- **Spotify**: add the app's Client ID (never the secret) and register `<site>/callback/` as a Redirect URI.
+  Sign-in uses PKCE, so no secret exists in this code. Spotify currently limits Development Mode apps to a
+  few named test users, so this is for personal use unless the app is approved for extended access.
 
+## Adding a background
 
-## Context
-This application is my Mod 3 Final solo project, and I worked on it for roughly 20 hours.
-
-## Learning Goals
-- Learn how to use the spotify API
-- Challenge my css skills with organizing lots of elements in a small place
-- Create a multi-page UX utilizing React Router.
-
-## Wins + Challenges
-- Creating a very good looking festival lineup that is easily accessable for every spotify user
-- A large challenge was Spotify's authentication, it takes about 4 rounds of API fetch's to get to the point where I have a users data
-- One large challenge I am still working on is figuring out how to download the festival lineup as a PNG. I have found solutions but the way I wrote my code is making it a lot harder, I will maybe try converting the final product to a canvas to fix this issue.
+Add a function `(ctx, w, h, t, palette)` to `backgrounds.js` and list it in `RV.backgrounds`.
+`t` runs from 0 to 1; make the drawing identical at 0 and 1 so the recorded loop is seamless.
