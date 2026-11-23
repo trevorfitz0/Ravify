@@ -249,9 +249,9 @@
     $('sheet-actions').hidden = false;
     const share = RV.canShare(f);
     $('share').hidden = !share;
-    if (f.type === 'video/webm') hint.textContent = 'This browser records WebM video, which Instagram and Snapchat will not take. Open ravify in Chrome or Safari to get an MP4.';
+    if (f.type === 'video/webm') hint.textContent = 'This browser records WebM video, which Instagram and Snapchat will not take. Open simplefest in Chrome or Safari to get an MP4.';
     else if (share) hint.textContent = 'Tap Share to story, choose Instagram or Snapchat, then pick Story.';
-    else hint.textContent = 'Download it, then add it to your story from your camera roll. Sharing straight to Instagram or Snapchat works when you open ravify on your phone.';
+    else hint.textContent = 'Download it, then add it to your story from your camera roll. Sharing straight to Instagram or Snapchat works when you open simplefest on your phone.';
   }
   function closeSheet() {
     if (busy) return;

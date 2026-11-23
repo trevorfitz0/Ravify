@@ -1,4 +1,4 @@
-# ravify
+# simplefest
 
 Make a festival lineup poster with a moving background and share it to your Instagram or Snapchat story.
 

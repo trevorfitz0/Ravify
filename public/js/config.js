@@ -2,7 +2,7 @@
 window.RV = window.RV || {};
 RV.config = {
   // Small credit line at the bottom of every poster.
-  watermark: 'made with ravify',
+  watermark: 'simplefest.net',
 
   // Optional imports. Leave blank to hide the button.
   // Spotify: the app's Client ID (not the secret). Add  <your site>/callback/  as a Redirect URI in the Spotify dashboard.

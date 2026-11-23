@@ -16,7 +16,7 @@
     const c = full();
     RV.drawPoster(c.getContext('2d'), RV.W, RV.H, t, state);
     return new Promise((resolve, reject) => {
-      c.toBlob((b) => (b ? resolve(new File([b], 'ravify-lineup.png', { type: 'image/png' })) : reject(new Error('no image'))), 'image/png');
+      c.toBlob((b) => (b ? resolve(new File([b], 'simplefest-lineup.png', { type: 'image/png' })) : reject(new Error('no image'))), 'image/png');
     });
   };
 
@@ -43,7 +43,7 @@
       rec.onstop = () => {
         stream.getTracks().forEach((tr) => tr.stop());
         const base = type.mime.split(';')[0];
-        resolve(new File([new Blob(chunks, { type: base })], 'ravify-lineup.' + type.ext, { type: base }));
+        resolve(new File([new Blob(chunks, { type: base })], 'simplefest-lineup.' + type.ext, { type: base }));
       };
       rec.start();
       const start = performance.now();

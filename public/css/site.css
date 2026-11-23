@@ -19,6 +19,7 @@ a:hover { color: var(--ink); }
 .site-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 28px 0; }
 .logo { text-decoration: none; color: var(--ink); font-size: 30px; font-weight: 700; letter-spacing: -0.03em; }
 .logo .dot { color: var(--tan); }
+.logo .tld { color: var(--soft); font-weight: 400; }
 .site-head nav { display: flex; align-items: center; gap: 28px; }
 .site-head nav a { text-decoration: none; font-size: 16px; padding: 12px 2px; color: var(--soft); border-bottom: 2px solid transparent; }
 .site-head nav a:hover { color: var(--ink); border-bottom-color: var(--tan); }
