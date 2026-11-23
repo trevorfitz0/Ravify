@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap">
 <link rel="stylesheet" href="/css/site.css">
 <title>simplefest — your lineup, story-ready</title>
-<meta name="description" content="Turn your favourite artists into a festival lineup poster with a moving background, then share it to your Instagram or Snapchat story.">
+<meta name="description" content="Sign in with Spotify or Apple Music and turn your most-played artists into a festival lineup poster with a moving background for your Instagram or Snapchat story.">
 <meta property="og:title" content="simplefest — your lineup, story-ready">
 <meta property="og:url" content="https://simplefest.net/">
 <meta property="og:description" content="Make a festival lineup poster with a moving background and share it to your story.">
@@ -29,7 +29,13 @@
   <section class="hero">
     <p class="kicker">Lineup posters for your story</p>
     <h1>Your lineup,<br>story-ready.</h1>
-    <p class="lede">Type the artists you'd book, pick a moving background, and send it straight to your Instagram or Snapchat story. Or just save it.</p>
+    <p class="lede">Sign in with the music app you use and we'll build a festival poster from the artists you actually play. Pick a moving background, then send it straight to your Instagram or Snapchat story.</p>
+    <div class="connect">
+      <button class="btn" id="spotify" type="button" hidden>Continue with Spotify</button>
+      <button class="btn alt" id="apple" type="button" hidden>Continue with Apple Music</button>
+    </div>
+    <p class="notice err" id="import-error" role="alert" hidden></p>
+    <p class="note left" id="source">We only read your top artists. Nothing is posted or stored.</p>
   </section>
 
   <section class="builder" id="make">
@@ -44,22 +50,23 @@
           <label for="sub">Line underneath <span class="hint">dates, a place, anything</span></label>
           <input class="input" id="sub" maxlength="60" autocomplete="off" placeholder="Summer 2027 · Main Stage">
         </div>
-        <div class="field">
-          <label for="artists">Artists <span class="hint">one per line, headliner first, up to 30</span></label>
-          <textarea class="input" id="artists" rows="9" spellcheck="false" placeholder="Your headliner&#10;Second on the bill&#10;Everyone else…"></textarea>
-        </div>
-        <div class="btn-row">
-          <button class="btn small ghost" id="shuffle" type="button">Shuffle order</button>
-          <button class="btn small ghost" id="clear" type="button">Start empty</button>
-          <button class="btn small ghost" id="spotify" type="button" hidden>Import from Spotify</button>
-          <button class="btn small ghost" id="lastfm" type="button" hidden>Import from Last.fm</button>
-        </div>
-        <form class="inline-form" id="lastfm-form" hidden>
-          <label class="sr" for="lastfm-user">Last.fm username</label>
-          <input class="input" id="lastfm-user" placeholder="Last.fm username" autocomplete="off">
-          <button class="btn small" type="submit">Import</button>
-        </form>
-        <p class="notice err" id="import-error" role="alert" hidden></p>
+        <details class="edit" id="edit" open>
+          <summary>Edit the names</summary>
+          <div class="field">
+            <label for="artists">Artists <span class="hint">one per line, headliner first, up to 30</span></label>
+            <textarea class="input" id="artists" rows="9" spellcheck="false" placeholder="Your headliner&#10;Second on the bill&#10;Everyone else…"></textarea>
+          </div>
+          <div class="btn-row">
+            <button class="btn small ghost" id="shuffle" type="button">Shuffle order</button>
+            <button class="btn small ghost" id="clear" type="button">Start empty</button>
+            <button class="btn small ghost" id="lastfm" type="button" hidden>Import from Last.fm</button>
+          </div>
+          <form class="inline-form" id="lastfm-form" hidden>
+            <label class="sr" for="lastfm-user">Last.fm username</label>
+            <input class="input" id="lastfm-user" placeholder="Last.fm username" autocomplete="off">
+            <button class="btn small" type="submit">Import</button>
+          </form>
+        </details>
       </div>
 
       <div class="card slate">
@@ -95,7 +102,7 @@
   </section>
 
   <section class="steps" id="how">
-    <div class="step"><span class="n">01</span><h3>Book your dream bill</h3><p>Type or paste your artists. The first name headlines; the rest fall into rows underneath.</p></div>
+    <div class="step"><span class="n">01</span><h3>Sign in</h3><p>Connect Spotify or Apple Music and your most-played artists become the lineup. Your number one headlines.</p></div>
     <div class="step"><span class="n">02</span><h3>Pick the mood</h3><p>Seven backgrounds that move, six colour sets, three lettering styles. Or put your own photo behind it.</p></div>
     <div class="step"><span class="n">03</span><h3>Post it</h3><p>Save a still image or an eight-second loop sized for stories, then share it to Instagram or Snapchat from your phone.</p></div>
   </section>

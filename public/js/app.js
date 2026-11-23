@@ -121,25 +121,38 @@
   });
   fillForm();
 
-  // ----- optional imports -----
-  const importError = $('import-error');
-  function fail(e) { importError.textContent = e.message || 'That import did not work.'; importError.hidden = false; }
+  // ----- sign in with a music app -----
+  const importError = $('import-error'), source = $('source');
+  function fail(e) { importError.textContent = (e && e.message) || 'That did not work. Try again.'; importError.hidden = false; }
+  function imported(names, from) {
+    const list = clean({ artists: names }).artists;
+    if (!list.length) return fail(new Error(from + ' has no listening history for this account yet.'));
+    importError.hidden = true;
+    setArtists(list);
+    source.textContent = `Your top ${list.length} from ${from}. Your number one is headlining.`;
+    $('edit').open = false;
+    $('make').scrollIntoView({ block: 'start' });
+  }
   if (RV.config.spotifyClientId) {
     $('spotify').hidden = false;
     $('spotify').addEventListener('click', () => RV.spotifyLogin().catch(fail));
   }
+  // The Apple Music button appears only when the host has Apple credentials set up.
+  RV.appleToken().then((token) => {
+    if (!token) return;
+    $('apple').hidden = false;
+    $('apple').addEventListener('click', () => {
+      $('apple').disabled = true;
+      RV.appleTop(token).then((names) => imported(names, 'Apple Music')).catch(fail).finally(() => { $('apple').disabled = false; });
+    });
+  });
   if (RV.config.lastfmApiKey) {
     $('lastfm').hidden = false;
     $('lastfm').addEventListener('click', () => { $('lastfm-form').hidden = false; $('lastfm-user').focus(); });
     $('lastfm-form').addEventListener('submit', (e) => {
       e.preventDefault();
-      importError.hidden = true;
       const user = $('lastfm-user').value.trim();
-      if (!user) return;
-      RV.lastfmTop(user).then((names) => {
-        if (!names.length) throw new Error('No listening history found for that user.');
-        setArtists(names);
-      }).catch(fail);
+      if (user) RV.lastfmTop(user).then((names) => imported(names, 'Last.fm')).catch(fail);
     });
   }
   // Names handed back by the Spotify callback page.
@@ -149,7 +162,7 @@
       localStorage.removeItem('rv-import');
       const d = JSON.parse(got);
       if (d.error) fail(new Error(d.error));
-      else if (Array.isArray(d.artists) && d.artists.length) setArtists(clean({ artists: d.artists }).artists);
+      else imported(d.artists || [], 'Spotify');
     }
   } catch (e) { /* ignore */ }
 

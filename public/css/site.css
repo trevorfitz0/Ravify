@@ -29,6 +29,14 @@ a:hover { color: var(--ink); }
 h1 { margin: 0; font-size: clamp(44px, 7vw, 84px); line-height: 0.98; letter-spacing: -0.035em; }
 .lede { margin: 0; font-size: 20px; line-height: 1.5; color: var(--soft); max-width: 32em; }
 
+.connect { display: flex; flex-wrap: wrap; gap: 12px; }
+.note.left { text-align: left; }
+.hero .notice { max-width: 36em; }
+.edit { display: flex; flex-direction: column; gap: 16px; }
+.edit summary { cursor: pointer; font-size: 15px; font-weight: 700; padding: 10px 0; }
+.edit[open] summary { margin-bottom: 12px; }
+.edit .btn-row, .edit .inline-form { margin-top: 16px; }
+
 .builder { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; padding: 0 0 72px; scroll-margin-top: 24px; }
 .controls { flex: 999 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 24px; }
 .stage { flex: 1 1 320px; max-width: 400px; margin: 0 auto; position: sticky; top: 24px; display: flex; flex-direction: column; gap: 16px; align-items: center; }
